@@ -1,5 +1,5 @@
-#ifndef _FILEHANDLER_H
-#define _FILEHANDLER_H
+#ifndef FILEHANDLER_H
+#define FILEHANDLER_H
 
 #include <string>
 
@@ -22,6 +22,7 @@ public:
     // function
     void toggleDebugger(bool toggle);
     void addToFile(std::string strAddition);
+    void deleteFile();
 
 
 
@@ -32,5 +33,6 @@ private:
     bool debugger;
 
 };
+
 
 #endif

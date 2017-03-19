@@ -13,7 +13,17 @@ Date: 03/15/17
 int main()
 {
 
-    //std::string fileName;
+    std::string myAddition = "The first string added to the file";
+    std::string fileName = "givenname";
+    std::string fileType = ".txt";
+
+
+    FileHandler* debuggerFile = new FileHandler();
+
+    debuggerFile->deleteFile();
+
+    debuggerFile->addToFile(myAddition);
+    debuggerFile->addToFile("add this too");
 
 
     return(0);

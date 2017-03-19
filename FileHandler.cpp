@@ -1,7 +1,11 @@
+#ifndef FILEHANDLER_CPP
+#define FILEHANDLER_CPP
+
 #include "FileHandler.h"
 #include <string>
 #include <iostream>
 #include <cstdlib>
+#include <fstream>
 
 // constructor/destructor -------------------------------------------------
 FileHandler::FileHandler()
@@ -72,7 +76,38 @@ bool FileHandler::setType(std::string &newTypeName)
 void FileHandler::toggleDebugger(bool toggle)
 {
 
+    // defaulted debugger to false
     debugger = toggle;
 
 }
+
+void FileHandler::addToFile(std::string strAddition)
+{
+
+    std::string str;
+    str.append(fileName);
+    str.append(fileType);
+    std::ofstream stream;
+
+    //file exists already, append content to file
+    stream.open(str.c_str(), std::ios_base::app);
+    stream << strAddition << "\r\n";
+
+    stream.close();
+
+
+}
+
+void FileHandler::deleteFile()
+{
+
+    std::string str;
+    str.append(fileName);
+    str.append(fileType);
+
+    std::remove(str.c_str());
+
+}
+
+#endif
 
