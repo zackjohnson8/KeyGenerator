@@ -83,7 +83,7 @@ void FileHandler::addTextToFile(std::string &strAddition)
 
     //file exists already, append content to file
     stream.open(appendedName.c_str(), std::ios_base::app);
-    stream << strAddition << "\r\n";
+    stream << strAddition << std::endl;
 
     stream.close();
 
@@ -124,7 +124,68 @@ std::string FileHandler::peakTop()
 bool FileHandler::deleteBySearch(std::string &searchedValue)
 {
 
-    return false;
+    // Open file search while good() and compare each line with getline then str.compare()
+    std::ifstream stream;
+    std::ofstream tempFile;
+    std::string tempFileName = "tempFile.txt";
+    std::string holdLine;
+    std::string holdString;
+    bool flag = false;
+
+    stream.open(appendedName.c_str());
+    tempFile.open(tempFileName.c_str());
+
+    while(stream.good())
+    {
+
+        std::getline(stream, holdLine);
+
+        if(holdLine.compare(searchedValue) == 0)
+        {
+
+            // found the correct string
+            flag = true;
+
+
+        }
+        else
+        {
+
+            // write to the temp file
+            tempFile << holdLine << std::endl;
+
+
+        }
+
+
+
+    }
+
+    stream.clear();
+    tempFile.close();
+    stream.close();
+
+    std::ofstream streamReadBack;
+    std::ifstream tempFileReadBack;
+
+    streamReadBack.open(appendedName.c_str());
+    tempFileReadBack.open(tempFileName.c_str());
+
+    while(tempFileReadBack.good())
+    {
+
+        std::getline(tempFileReadBack, holdLine);
+
+        streamReadBack << holdLine << std::endl;
+
+
+    }
+
+    tempFileReadBack.close();
+    std::remove(tempFileName.c_str());
+    streamReadBack.close();
+
+    return flag;
 
 }
 

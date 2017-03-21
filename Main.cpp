@@ -29,11 +29,15 @@ int main()
 
     debuggerFile->addTextToFile(myAddition);
     debuggerFile->addTextToFile(myAdditionTwo);
+    debuggerFile->addTextToFile(myAddition);
+    debuggerFile->addTextToFile(myAdditionTwo);
+    debuggerFile->addTextToFile(myAddition);
+    debuggerFile->addTextToFile(myAdditionTwo);
 
     debuggerFile->deleteBySearch(myAdditionTwo);
     testString = debuggerFile->peakTop();
 
-    debuggerFile->addTextToFile(testString);
+    //debuggerFile->deleteBySearch(myAddition);
 
     return(0);
 }
