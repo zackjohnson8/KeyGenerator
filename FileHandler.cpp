@@ -13,6 +13,8 @@ FileHandler::FileHandler()
 
     fileName = "default";
     fileType = ".txt";
+    appendedName = fileName;
+    appendedName.append(fileType);
     debugger = false;
 
 }
@@ -22,6 +24,8 @@ FileHandler::FileHandler(std::string &fileN, std::string &fileT)
 
     fileName = fileN;
     fileType = fileT;
+    appendedName = fileName;
+    appendedName.append(fileType);
     debugger = false;
 
 }
@@ -38,19 +42,14 @@ std::string FileHandler::getFileName()
     return fileName;
 }
 
-bool FileHandler::setFileName(std::string &newFileName)
+void FileHandler::setFileName(std::string &newFileName)
 {
-
-    if(newFileName == "")
-    {
-
-        return false;
-
-    }
 
     fileName = newFileName;
 
-    return false;
+    appendedName = fileName;
+    appendedName.append(fileType);
+
 }
 
 std::string FileHandler::getType()
@@ -58,18 +57,14 @@ std::string FileHandler::getType()
     return fileType;
 }
 
-bool FileHandler::setType(std::string &newTypeName)
+void FileHandler::setType(std::string &newTypeName)
 {
-
-    //TODO: Need to set up a list of type names that are compatible
-    if(newTypeName == "")
-    {
-        return false;
-    }
 
     fileType = newTypeName;
 
-    return false;
+    appendedName = fileName;
+    appendedName.append(fileType);
+
 }
 
 // function --------------------------------------------------------------
@@ -81,16 +76,13 @@ void FileHandler::toggleDebugger(bool toggle)
 
 }
 
-void FileHandler::addToFile(std::string strAddition)
+void FileHandler::addTextToFile(std::string &strAddition)
 {
 
-    std::string str;
-    str.append(fileName);
-    str.append(fileType);
     std::ofstream stream;
 
     //file exists already, append content to file
-    stream.open(str.c_str(), std::ios_base::app);
+    stream.open(appendedName.c_str(), std::ios_base::app);
     stream << strAddition << "\r\n";
 
     stream.close();
@@ -101,11 +93,38 @@ void FileHandler::addToFile(std::string strAddition)
 void FileHandler::deleteFile()
 {
 
-    std::string str;
-    str.append(fileName);
-    str.append(fileType);
+    std::remove(appendedName.c_str());
 
-    std::remove(str.c_str());
+}
+
+std::string FileHandler::peakTop()
+{
+
+
+    std::ifstream stream;
+    std::string holdLine;
+
+    stream.open(appendedName.c_str());
+
+    if(stream.good())
+    {
+
+        std::getline(stream, holdLine);
+        return holdLine;
+
+    }
+
+    stream.close();
+
+    // getline(), check if file is empty first
+    return std::string();
+
+}
+
+bool FileHandler::deleteBySearch(std::string &searchedValue)
+{
+
+    return false;
 
 }
 

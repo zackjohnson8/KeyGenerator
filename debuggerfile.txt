@@ -1,2 +1,3 @@
 The first string added to the file
 add this too
+The first string added to the file

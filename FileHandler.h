@@ -15,14 +15,17 @@ public:
 
     // get/set
     std::string getFileName();
-    bool setFileName(std::string &newFileName);
     std::string getType();
-    bool setType(std::string &newTypeName);
+    void setFileName(std::string &newFileName);
+    void setType(std::string &newTypeName);
 
     // function
     void toggleDebugger(bool toggle);
-    void addToFile(std::string strAddition);
+    void addTextToFile(std::string &strAddition);
     void deleteFile();
+    bool deleteBySearch(std::string & searchedValue);
+    std::string peakTop();
+
 
 
 
@@ -30,6 +33,7 @@ private:
 
     std::string fileName;
     std::string fileType;
+    std::string appendedName;
     bool debugger;
 
 };

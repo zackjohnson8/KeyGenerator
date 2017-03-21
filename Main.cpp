@@ -14,17 +14,26 @@ int main()
 {
 
     std::string myAddition = "The first string added to the file";
-    std::string fileName = "givenname";
+    std::string myAdditionTwo = "add this too";
+    std::string fileName = "debuggerfile";
     std::string fileType = ".txt";
+    std::string testString;
 
 
+    // Create a FileHandler to test the file handler text addition and removal
     FileHandler* debuggerFile = new FileHandler();
 
-    debuggerFile->deleteFile();
+    debuggerFile->setFileName(fileName);
 
-    debuggerFile->addToFile(myAddition);
-    debuggerFile->addToFile("add this too");
+    debuggerFile->deleteFile(); // Deletes the current fileName
 
+    debuggerFile->addTextToFile(myAddition);
+    debuggerFile->addTextToFile(myAdditionTwo);
+
+    debuggerFile->deleteBySearch(myAdditionTwo);
+    testString = debuggerFile->peakTop();
+
+    debuggerFile->addTextToFile(testString);
 
     return(0);
 }
