@@ -6,6 +6,18 @@
 
 #IncludeRegexTransform: 
 
+/home/zack/git-repos/KeyGenerator/FileHandler.cpp
+FileHandler.h
+/home/zack/git-repos/KeyGenerator/FileHandler.h
+string
+-
+iostream
+-
+cstdlib
+-
+fstream
+-
+
 /home/zack/git-repos/KeyGenerator/FileHandler.h
 string
 -

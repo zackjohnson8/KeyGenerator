@@ -189,6 +189,33 @@ myproject/fast:
 	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/build
 .PHONY : myproject/fast
 
+FileHandler.o: FileHandler.cpp.o
+
+.PHONY : FileHandler.o
+
+# target to build an object file
+FileHandler.cpp.o:
+	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/FileHandler.cpp.o
+.PHONY : FileHandler.cpp.o
+
+FileHandler.i: FileHandler.cpp.i
+
+.PHONY : FileHandler.i
+
+# target to preprocess a source file
+FileHandler.cpp.i:
+	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/FileHandler.cpp.i
+.PHONY : FileHandler.cpp.i
+
+FileHandler.s: FileHandler.cpp.s
+
+.PHONY : FileHandler.s
+
+# target to generate assembly for a file
+FileHandler.cpp.s:
+	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/FileHandler.cpp.s
+.PHONY : FileHandler.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -231,6 +258,9 @@ help:
 	@echo "... list_install_components"
 	@echo "... myproject"
 	@echo "... install"
+	@echo "... FileHandler.o"
+	@echo "... FileHandler.i"
+	@echo "... FileHandler.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

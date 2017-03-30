@@ -15,7 +15,7 @@ Date: 03/15/17
 int main()
 {
 
-/*
+
     std::string myAddition = "The first string added to the file";
     std::string myAdditionTwo = "add this too";
     std::string fileName = "debuggerfile";
@@ -41,7 +41,7 @@ int main()
     testString = debuggerFile->peakTop();
 
     //debuggerFile->deleteBySearch(myAddition);
-*/
+
     sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
     sf::CircleShape shape(100.f);
     shape.setFillColor(sf::Color::Green);
