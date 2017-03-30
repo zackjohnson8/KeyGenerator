@@ -5,6 +5,8 @@ Version: 1.0
 Date: 03/15/17
 */
 
+//TODO: Keep the file handler but create a debugger system for youself to use and change when needed.
+
 #include <iostream>
 #include <cstdlib>
 #include <string>
