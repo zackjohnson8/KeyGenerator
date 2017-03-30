@@ -42,9 +42,9 @@ int main()
 
     //debuggerFile->deleteBySearch(myAddition);
 
-    sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
-    sf::CircleShape shape(100.f);
-    shape.setFillColor(sf::Color::Green);
+    sf::RenderWindow window(sf::VideoMode(500, 500), "SFML works!");
+    sf::CircleShape shape(250.f);
+    shape.setFillColor(sf::Color::Cyan);
 
     while (window.isOpen())
     {
