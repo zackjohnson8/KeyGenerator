@@ -1,1 +1,0 @@
-/usr/bin/c++      CMakeFiles/DataStructerLibrary.dir/FileHandler.cpp.o CMakeFiles/DataStructerLibrary.dir/Main.cpp.o  -o DataStructerLibrary -rdynamic 

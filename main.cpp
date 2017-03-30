@@ -9,10 +9,13 @@ Date: 03/15/17
 #include <cstdlib>
 #include <string>
 #include "FileHandler.h"
+#include <SFML/Graphics.hpp>
+#include "config.h"
 
 int main()
 {
 
+/*
     std::string myAddition = "The first string added to the file";
     std::string myAdditionTwo = "add this too";
     std::string fileName = "debuggerfile";
@@ -38,6 +41,24 @@ int main()
     testString = debuggerFile->peakTop();
 
     //debuggerFile->deleteBySearch(myAddition);
+*/
+    sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
+    sf::CircleShape shape(100.f);
+    shape.setFillColor(sf::Color::Green);
+
+    while (window.isOpen())
+    {
+        sf::Event event;
+        while (window.pollEvent(event))
+        {
+            if (event.type == sf::Event::Closed)
+                window.close();
+        }
+
+        window.clear();
+        window.draw(shape);
+        window.display();
+    }
 
     return(0);
 }

@@ -60,39 +60,39 @@ CMAKE_SOURCE_DIR = /home/zack/git-repos/KeyGenerator
 CMAKE_BINARY_DIR = /home/zack/git-repos/KeyGenerator
 
 #=============================================================================
-# Target rules for target CMakeFiles/DataStructerLibrary.dir
+# Target rules for target CMakeFiles/myproject.dir
 
 # All Build rule for target.
-CMakeFiles/DataStructerLibrary.dir/all:
-	$(MAKE) -f CMakeFiles/DataStructerLibrary.dir/build.make CMakeFiles/DataStructerLibrary.dir/depend
-	$(MAKE) -f CMakeFiles/DataStructerLibrary.dir/build.make CMakeFiles/DataStructerLibrary.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zack/git-repos/KeyGenerator/CMakeFiles --progress-num=1,2,3 "Built target DataStructerLibrary"
-.PHONY : CMakeFiles/DataStructerLibrary.dir/all
+CMakeFiles/myproject.dir/all:
+	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/depend
+	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zack/git-repos/KeyGenerator/CMakeFiles --progress-num=1,2 "Built target myproject"
+.PHONY : CMakeFiles/myproject.dir/all
 
 # Include target in all.
-all: CMakeFiles/DataStructerLibrary.dir/all
+all: CMakeFiles/myproject.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/DataStructerLibrary.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zack/git-repos/KeyGenerator/CMakeFiles 3
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/DataStructerLibrary.dir/all
+CMakeFiles/myproject.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zack/git-repos/KeyGenerator/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/myproject.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/zack/git-repos/KeyGenerator/CMakeFiles 0
-.PHONY : CMakeFiles/DataStructerLibrary.dir/rule
+.PHONY : CMakeFiles/myproject.dir/rule
 
 # Convenience name for target.
-DataStructerLibrary: CMakeFiles/DataStructerLibrary.dir/rule
+myproject: CMakeFiles/myproject.dir/rule
 
-.PHONY : DataStructerLibrary
-
-# clean rule for target.
-CMakeFiles/DataStructerLibrary.dir/clean:
-	$(MAKE) -f CMakeFiles/DataStructerLibrary.dir/build.make CMakeFiles/DataStructerLibrary.dir/clean
-.PHONY : CMakeFiles/DataStructerLibrary.dir/clean
+.PHONY : myproject
 
 # clean rule for target.
-clean: CMakeFiles/DataStructerLibrary.dir/clean
+CMakeFiles/myproject.dir/clean:
+	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/clean
+.PHONY : CMakeFiles/myproject.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/myproject.dir/clean
 
 .PHONY : clean
 

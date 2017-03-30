@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/zack/git-repos/KeyGenerator/FileHandler.h
+string
+-
+
+/home/zack/git-repos/KeyGenerator/config.h
+
+/home/zack/git-repos/KeyGenerator/main.cpp
+iostream
+-
+cstdlib
+-
+string
+-
+FileHandler.h
+/home/zack/git-repos/KeyGenerator/FileHandler.h
+SFML/Graphics.hpp
+-
+config.h
+/home/zack/git-repos/KeyGenerator/config.h
+
