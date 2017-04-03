@@ -35,6 +35,8 @@ FileHandler.h
 /home/zack/git-repos/KeyGenerator/FileHandler.h
 SFML/Graphics.hpp
 -
+SFML/Audio.hpp
+-
 config.h
 /home/zack/git-repos/KeyGenerator/config.h
 

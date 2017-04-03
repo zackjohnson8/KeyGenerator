@@ -7,11 +7,13 @@ Date: 03/15/17
 
 //TODO: Keep the file handler but create a debugger system for youself to use and change when needed.
 
+//READLIST: Global variable appropriate uses.
 #include <iostream>
 #include <cstdlib>
 #include <string>
 #include "FileHandler.h"
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
 #include "config.h"
 
 int main()
@@ -24,6 +26,7 @@ int main()
     std::string fileType = ".txt";
     std::string testString;
 
+//========== File Handler Debugging ====================//
 
     // Create a FileHandler to test the file handler text addition and removal
     FileHandler* debuggerFile = new FileHandler();
@@ -44,6 +47,8 @@ int main()
 
     //debuggerFile->deleteBySearch(myAddition);
 
+//========== SFML Circle Drawing ====================================//
+
     sf::RenderWindow window(sf::VideoMode(500, 500), "SFML works!");
     sf::CircleShape shape(250.f);
     shape.setFillColor(sf::Color::Cyan);
@@ -61,6 +66,16 @@ int main()
         window.draw(shape);
         window.display();
     }
+
+//========== SFML Audio library music playing ===========================//
+
+    // Use the music class
+    sf::Music* myMusic = new sf::Music();
+
+    myMusic->openFromFile("");
+
+    delete myMusic;
+
 
     return(0);
 }
