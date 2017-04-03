@@ -16,6 +16,9 @@ Date: 03/15/17
 #include <SFML/Audio.hpp>
 #include "config.h"
 
+const int WINDOW_WIDTH = 500;
+const int WINDOW_HEIGHT = 500;
+
 int main()
 {
 
@@ -49,9 +52,21 @@ int main()
 
 //========== SFML Circle Drawing ====================================//
 
-    sf::RenderWindow window(sf::VideoMode(500, 500), "SFML works!");
+    sf::RenderWindow window(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "SFML works!");
     sf::CircleShape shape(250.f);
+    sf::Color windowColor(240, 240, 240);
+
+    sf::VideoMode desktop = sf::VideoMode::getDesktopMode();
+    sf::Vector2i windowPosition((desktop.width / 2 - (WINDOW_WIDTH/2)), ( desktop.height / 2 - (WINDOW_HEIGHT/2)));
+
     shape.setFillColor(sf::Color::Cyan);
+    sf::Music* myMusic = new sf::Music();
+
+    myMusic->openFromFile("mymusic.flac");
+    //myMusic->play();
+
+
+    window.setPosition(windowPosition);
 
     while (window.isOpen())
     {
@@ -62,18 +77,13 @@ int main()
                 window.close();
         }
 
-        window.clear();
-        window.draw(shape);
+        window.clear(windowColor);
         window.display();
     }
 
 //========== SFML Audio library music playing ===========================//
 
     // Use the music class
-    sf::Music* myMusic = new sf::Music();
-
-    myMusic->openFromFile("");
-
     delete myMusic;
 
 
