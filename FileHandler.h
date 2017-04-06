@@ -21,9 +21,9 @@ public:
 
     // function
     void toggleDebugger(bool toggle);
-    void addTextToFile(std::string &strAddition);
+    void addTextToFile(const std::string & strAddition);
     void deleteFile();
-    bool deleteBySearch(std::string & searchedValue);
+    bool deleteBySearch(const std::string & searchedValue);
     std::string peakTop();
 
 

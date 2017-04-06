@@ -5,7 +5,7 @@ Version: 1.0
 Date: 03/15/17
 */
 
-//TODO: Keep the file handler but create a debugger system for youself to use and change when needed.
+//TODO: Seperate my program into classes for my own use
 
 //READLIST: Global variable appropriate uses.
 #include <iostream>
@@ -19,20 +19,17 @@ Date: 03/15/17
 const int WINDOW_WIDTH = 500;
 const int WINDOW_HEIGHT = 500;
 
-int main()
+void fileHandlerDebugger( FileHandler* debuggerFile )
 {
 
+    //TODO: Honestly this function would be much better if static functions and variables for debugging.
+    // Still using as a file handler but could be better as a debugger.
 
     std::string myAddition = "The first string added to the file";
     std::string myAdditionTwo = "add this too";
     std::string fileName = "debuggerfile";
     std::string fileType = ".txt";
     std::string testString;
-
-//========== File Handler Debugging ====================//
-
-    // Create a FileHandler to test the file handler text addition and removal
-    FileHandler* debuggerFile = new FileHandler();
 
     debuggerFile->setFileName(fileName);
 
@@ -45,14 +42,28 @@ int main()
     debuggerFile->addTextToFile(myAddition);
     debuggerFile->addTextToFile(myAdditionTwo);
 
-    debuggerFile->deleteBySearch(myAdditionTwo);
+    //debuggerFile->deleteBySearch(myAdditionTwo);
     testString = debuggerFile->peakTop();
 
     //debuggerFile->deleteBySearch(myAddition);
 
+}
+
+int main()
+{
+
+
+//========== File Handler Debugging ====================//
+
+    // Create a FileHandler to test the file handler text addition and removal
+    FileHandler* debugFile = new FileHandler();
+
+    fileHandlerDebugger(debugFile);
+
+
 //========== SFML Circle Drawing ====================================//
 
-    sf::RenderWindow window(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "SFML works!");
+    sf::RenderWindow window(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "");
     sf::CircleShape shape(250.f);
     sf::Color windowColor(240, 240, 240);
 
@@ -64,6 +75,20 @@ int main()
 
     myMusic->openFromFile("mymusic.flac");
     //myMusic->play();
+
+
+    sf::Font font;
+    if(!font.loadFromFile("ClearSans-Regular.ttf"))
+    {
+
+        debugFile->addTextToFile("Error loading font");
+
+    }else
+    {
+
+        debugFile->addTextToFile("Added the font to the program");
+
+    }
 
 
     window.setPosition(windowPosition);
