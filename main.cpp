@@ -5,7 +5,7 @@ Version: 1.0
 Date: 03/15/17
 */
 
-//TODO: Seperate my program into classes for my own use
+//TODO: Fix the window handle to be held in main and not in the class itself
 
 //READLIST: Global variable appropriate uses.
 #include <iostream>
