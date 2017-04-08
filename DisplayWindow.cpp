@@ -9,9 +9,7 @@ DisplayWindow::DisplayWindow(int width, int height)
     windowHeight = height;
     mainWindow.setSize(windowSize);
 
-    windowColor.a = 240;
-    windowColor.b = 240;
-    windowColor.g = 240;
+    mainWindow.create(sf::VideoMode(width, height), "");
 
 }
 
@@ -35,5 +33,21 @@ void DisplayWindow::close()
 
 
     mainWindow.close();
+
+}
+
+bool DisplayWindow::isOpen()
+{
+
+    return mainWindow.isOpen();
+
+}
+
+bool DisplayWindow::pollEvent(sf::Event& e)
+{
+
+
+    return mainWindow.pollEvent(e);
+
 
 }

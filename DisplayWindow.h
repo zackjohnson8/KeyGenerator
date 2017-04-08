@@ -12,6 +12,8 @@ public:
 
     void showWindow(bool status);
     void close();
+    bool isOpen();
+    bool pollEvent(sf::Event& e);
 
 private:
     int windowWidth;

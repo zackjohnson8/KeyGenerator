@@ -66,7 +66,7 @@ int main()
 
 
 
-
+    int holdValue;
     sf::CircleShape shape(250.f);
 
 
@@ -97,6 +97,9 @@ int main()
 
     window.setPosition(windowPosition);
 */
+
+
+
     while (window.isOpen())
     {
         sf::Event event;
