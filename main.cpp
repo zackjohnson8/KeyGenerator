@@ -12,12 +12,10 @@ Date: 03/15/17
 #include <cstdlib>
 #include <string>
 #include "FileHandler.h"
+#include "DisplayWindow.h"
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
 #include "config.h"
-
-const int WINDOW_WIDTH = 500;
-const int WINDOW_HEIGHT = 500;
 
 void fileHandlerDebugger( FileHandler* debuggerFile )
 {
@@ -63,20 +61,26 @@ int main()
 
 //========== SFML Circle Drawing ====================================//
 
-    sf::RenderWindow window(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "");
-    sf::CircleShape shape(250.f);
-    sf::Color windowColor(240, 240, 240);
 
-    sf::VideoMode desktop = sf::VideoMode::getDesktopMode();
-    sf::Vector2i windowPosition((desktop.width / 2 - (WINDOW_WIDTH/2)), ( desktop.height / 2 - (WINDOW_HEIGHT/2)));
+
+
+
+
+
+    sf::CircleShape shape(250.f);
+
+
+    DisplayWindow window(500, 500);
+
 
     shape.setFillColor(sf::Color::Cyan);
-    sf::Music* myMusic = new sf::Music();
 
+
+    sf::Music* myMusic = new sf::Music();
     myMusic->openFromFile("mymusic.flac");
     //myMusic->play();
 
-
+/*
     sf::Font font;
     if(!font.loadFromFile("ClearSans-Regular.ttf"))
     {
@@ -92,7 +96,7 @@ int main()
 
 
     window.setPosition(windowPosition);
-
+*/
     while (window.isOpen())
     {
         sf::Event event;
@@ -102,8 +106,8 @@ int main()
                 window.close();
         }
 
-        window.clear(windowColor);
-        window.display();
+        window.showWindow(true);
+
     }
 
 //========== SFML Audio library music playing ===========================//

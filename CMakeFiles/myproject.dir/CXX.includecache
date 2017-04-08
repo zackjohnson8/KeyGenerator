@@ -6,6 +6,16 @@
 
 #IncludeRegexTransform: 
 
+/home/zack/git-repos/KeyGenerator/DisplayWindow.cpp
+DisplayWindow.h
+/home/zack/git-repos/KeyGenerator/DisplayWindow.h
+
+/home/zack/git-repos/KeyGenerator/DisplayWindow.h
+SFML/Graphics.hpp
+-
+SFML/Audio.hpp
+-
+
 /home/zack/git-repos/KeyGenerator/FileHandler.cpp
 FileHandler.h
 /home/zack/git-repos/KeyGenerator/FileHandler.h
@@ -35,6 +45,8 @@ string
 -
 FileHandler.h
 /home/zack/git-repos/KeyGenerator/FileHandler.h
+DisplayWindow.h
+/home/zack/git-repos/KeyGenerator/DisplayWindow.h
 SFML/Graphics.hpp
 -
 SFML/Audio.hpp

@@ -189,6 +189,33 @@ myproject/fast:
 	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/build
 .PHONY : myproject/fast
 
+DisplayWindow.o: DisplayWindow.cpp.o
+
+.PHONY : DisplayWindow.o
+
+# target to build an object file
+DisplayWindow.cpp.o:
+	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/DisplayWindow.cpp.o
+.PHONY : DisplayWindow.cpp.o
+
+DisplayWindow.i: DisplayWindow.cpp.i
+
+.PHONY : DisplayWindow.i
+
+# target to preprocess a source file
+DisplayWindow.cpp.i:
+	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/DisplayWindow.cpp.i
+.PHONY : DisplayWindow.cpp.i
+
+DisplayWindow.s: DisplayWindow.cpp.s
+
+.PHONY : DisplayWindow.s
+
+# target to generate assembly for a file
+DisplayWindow.cpp.s:
+	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/DisplayWindow.cpp.s
+.PHONY : DisplayWindow.cpp.s
+
 FileHandler.o: FileHandler.cpp.o
 
 .PHONY : FileHandler.o
@@ -258,6 +285,9 @@ help:
 	@echo "... list_install_components"
 	@echo "... myproject"
 	@echo "... install"
+	@echo "... DisplayWindow.o"
+	@echo "... DisplayWindow.i"
+	@echo "... DisplayWindow.s"
 	@echo "... FileHandler.o"
 	@echo "... FileHandler.i"
 	@echo "... FileHandler.s"

@@ -144,18 +144,20 @@ bool FileHandler::deleteBySearch(const std::string &searchedValue)
     std::ofstream tempFile;
     std::string tempFileName = "tempFile.txt";
     std::string holdLine;
-    std::string holdString;
+    std::string modifiedLine;
     bool flag = false;
 
     stream.open(appendedName.c_str());
     tempFile.open(tempFileName.c_str());
+
+    // The new addition of the date on each line messes up the search and delete
 
     while(stream.good())
     {
 
         std::getline(stream, holdLine);
 
-        if(holdLine.compare(searchedValue) == 0)
+        if(modifiedLine.compare(searchedValue) == 0)
         {
 
             // found the correct string
