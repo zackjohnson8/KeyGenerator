@@ -15,6 +15,8 @@ public:
     bool isOpen();
     bool pollEvent(sf::Event& e);
 
+    sf::RenderWindow getHandle();
+
 private:
     int windowWidth;
     int windowHeight;

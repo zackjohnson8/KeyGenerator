@@ -20,6 +20,13 @@ DisplayWindow::~DisplayWindow()
 
 }
 
+sf::RenderWindow DisplayWindow::getHandle()
+{
+
+    return mainWindow;
+
+}
+
 void DisplayWindow::showWindow(bool status)
 {
 

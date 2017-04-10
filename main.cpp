@@ -72,8 +72,13 @@ int main()
 
     DisplayWindow window(500, 500);
 
+    sf::RenderWindow windowHandle = window.getHandle();
 
-    shape.setFillColor(sf::Color::Cyan);
+
+
+    // Draw sprite to window? Honestly I still want to find a use for all the classes of SFML.
+    // Getting used to seperating the classes into seperate wings oo programming.
+    // 1: Add functionality to return the handle to the window from DisplayWindow Class
 
 
     sf::Music* myMusic = new sf::Music();
