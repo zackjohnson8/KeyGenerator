@@ -14,14 +14,17 @@ public:
     void close();
     bool isOpen();
     bool pollEvent(sf::Event& e);
+    void refreshWindow();
+    void setPosition(); // TODO
 
-    sf::RenderWindow getHandle();
+    sf::RenderWindow* getHandle();
 
 private:
     int windowWidth;
     int windowHeight;
+    bool visibleWindow;
 
-    sf::RenderWindow mainWindow;
+    sf::RenderWindow* mainWindow;
     sf::Color windowColor;
 
 };

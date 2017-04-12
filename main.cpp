@@ -67,14 +67,9 @@ int main()
 
 
     int holdValue;
-    sf::CircleShape shape(250.f);
-
-
-    DisplayWindow window(500, 500);
-
-    sf::RenderWindow windowHandle = window.getHandle();
-
-
+    //sf::CircleShape shape(250.f);
+    DisplayWindow* mainWindow = new DisplayWindow(500, 500);
+    sf::RenderWindow* mainWindowHandle = mainWindow->getHandle();
 
     // Draw sprite to window? Honestly I still want to find a use for all the classes of SFML.
     // Getting used to seperating the classes into seperate wings oo programming.
@@ -85,7 +80,7 @@ int main()
     myMusic->openFromFile("mymusic.flac");
     //myMusic->play();
 
-/*
+
     sf::Font font;
     if(!font.loadFromFile("ClearSans-Regular.ttf"))
     {
@@ -99,29 +94,47 @@ int main()
 
     }
 
+    sf::Text debugText;
+    debugText.setFont(font);
+    debugText.setCharacterSize(16);
+    debugText.setString("This Text");
+    debugText.setColor(sf::Color::Red);
 
-    window.setPosition(windowPosition);
-*/
 
 
 
-    while (window.isOpen())
-    {
-        sf::Event event;
-        while (window.pollEvent(event))
-        {
-            if (event.type == sf::Event::Closed)
-                window.close();
-        }
-
-        window.showWindow(true);
-
-    }
 
 //========== SFML Audio library music playing ===========================//
 
     // Use the music class
+
+
+//========= MAIN LOOP =========================
+
+    while (mainWindow->isOpen())
+    {
+        sf::Event event;
+        while (mainWindow->pollEvent(event))
+        {
+            if (event.type == sf::Event::Closed)
+                mainWindow->close();
+        }
+
+        // mainWindow->refreshWindow();
+        mainWindowHandle->clear(sf::Color::White);
+        mainWindowHandle->draw(debugText);
+        mainWindowHandle->display();
+
+    }
+
+
+
+//========= FREE MEMORY =========================================//
+// Make sure to call delete just incase you have things in the destructor that need to be done
+// This can be writing to a log file in the destructor.
+
     delete myMusic;
+    delete mainWindow;
 
 
     return(0);
