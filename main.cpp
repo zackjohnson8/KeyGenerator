@@ -17,6 +17,87 @@ Date: 03/15/17
 #include <SFML/Audio.hpp>
 #include "config.h"
 
+void fileHandlerDebugger( FileHandler* debuggerFile );
+
+int main()
+{
+
+
+//========== File Handler Debugging ====================//
+
+    // Create a FileHandler to test the file handler text addition and removal
+    FileHandler* debugFile = new FileHandler();
+
+    fileHandlerDebugger(debugFile);
+
+
+//========= MAIN LOOP =========================
+
+    // Window Parameters
+    DisplayWindow* mainWindow = new DisplayWindow(500, 500);
+    sf::RenderWindow* mainWindowHandle = mainWindow->getHandle();
+    mainWindowHandle->clear(sf::Color::White);
+    int holdValue;
+
+
+    while (mainWindow->isOpen())
+    {
+        sf::Event event;
+        while (mainWindow->pollEvent(event))
+        {
+            if (event.type == sf::Event::Closed)
+                mainWindow->close();
+        }
+
+        // Draw to background
+
+        mainWindow->refreshWindow();
+
+    }
+
+
+
+//========= FREE MEMORY =========================================//
+// Make sure to call delete just incase you have things in the destructor that need to be done
+// This can be writing to a log file in the destructor.
+
+    //delete myMusic;
+    delete mainWindow;
+
+//============= OLD CODE FROM EXPERIMENTING ========== //////
+
+//========== SFML Audio library music playing ===========================//
+
+//    Use the music class
+
+//    sf::Music* myMusic = new sf::Music();
+//    myMusic->openFromFile("mymusic.flac");
+//    myMusic->play();
+
+//    TODO: Add font to the program through reading from my filehandler class for debugging.
+//    sf::Font font;
+//    if(!font.loadFromFile("ClearSans-Regular.ttf"))
+//    {
+//
+//        debugFile->addTextToFile("Error loading font");
+//
+//    }else
+//    {
+//
+//        debugFile->addTextToFile("Added the font to the program");
+//
+//    }
+
+//    sf::Text debugText;
+//    debugText.setFont(font);
+//    debugText.setCharacterSize(16);
+//    debugText.setString("This Text");
+//    debugText.setColor(sf::Color::Red);
+
+
+    return(0);
+}
+
 void fileHandlerDebugger( FileHandler* debuggerFile )
 {
 
@@ -45,97 +126,4 @@ void fileHandlerDebugger( FileHandler* debuggerFile )
 
     //debuggerFile->deleteBySearch(myAddition);
 
-}
-
-int main()
-{
-
-
-//========== File Handler Debugging ====================//
-
-    // Create a FileHandler to test the file handler text addition and removal
-    FileHandler* debugFile = new FileHandler();
-
-    fileHandlerDebugger(debugFile);
-
-
-//========== SFML Circle Drawing ====================================//
-
-
-
-
-
-
-    int holdValue;
-    //sf::CircleShape shape(250.f);
-    DisplayWindow* mainWindow = new DisplayWindow(500, 500);
-    sf::RenderWindow* mainWindowHandle = mainWindow->getHandle();
-
-    // Draw sprite to window? Honestly I still want to find a use for all the classes of SFML.
-    // Getting used to seperating the classes into seperate wings oo programming.
-    // 1: Add functionality to return the handle to the window from DisplayWindow Class
-
-
-    sf::Music* myMusic = new sf::Music();
-    myMusic->openFromFile("mymusic.flac");
-    //myMusic->play();
-
-
-    sf::Font font;
-    if(!font.loadFromFile("ClearSans-Regular.ttf"))
-    {
-
-        debugFile->addTextToFile("Error loading font");
-
-    }else
-    {
-
-        debugFile->addTextToFile("Added the font to the program");
-
-    }
-
-    sf::Text debugText;
-    debugText.setFont(font);
-    debugText.setCharacterSize(16);
-    debugText.setString("This Text");
-    debugText.setColor(sf::Color::Red);
-
-
-
-
-
-//========== SFML Audio library music playing ===========================//
-
-    // Use the music class
-
-
-//========= MAIN LOOP =========================
-
-    while (mainWindow->isOpen())
-    {
-        sf::Event event;
-        while (mainWindow->pollEvent(event))
-        {
-            if (event.type == sf::Event::Closed)
-                mainWindow->close();
-        }
-
-        // mainWindow->refreshWindow();
-        mainWindowHandle->clear(sf::Color::White);
-        mainWindowHandle->draw(debugText);
-        mainWindowHandle->display();
-
-    }
-
-
-
-//========= FREE MEMORY =========================================//
-// Make sure to call delete just incase you have things in the destructor that need to be done
-// This can be writing to a log file in the destructor.
-
-    delete myMusic;
-    delete mainWindow;
-
-
-    return(0);
 }

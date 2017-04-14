@@ -39,7 +39,7 @@ void DisplayWindow::showWindow(bool status)
 void DisplayWindow::refreshWindow()
 {
 
-    mainWindow->clear(windowColor);
+    mainWindow->clear(sf::Color::White); // keeps redrawing it as its open
     mainWindow->display();
 
 
