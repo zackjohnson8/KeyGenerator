@@ -3,6 +3,7 @@
 
 CMakeFiles/myproject.dir/DisplayWindow.cpp.o: DisplayWindow.cpp
 CMakeFiles/myproject.dir/DisplayWindow.cpp.o: DisplayWindow.h
+CMakeFiles/myproject.dir/DisplayWindow.cpp.o: FileHandler.h
 CMakeFiles/myproject.dir/DisplayWindow.cpp.o: Sprite.h
 
 CMakeFiles/myproject.dir/FileHandler.cpp.o: FileHandler.cpp

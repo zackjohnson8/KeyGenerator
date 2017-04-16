@@ -17,8 +17,6 @@ Date: 03/15/17
 #include <SFML/Audio.hpp>
 #include "config.h"
 
-
-
 void fileHandlerDebugger( FileHandler* debuggerFile );
 
 int main()
@@ -56,6 +54,8 @@ int main()
 
     sf::Vector2i mousePosition;
 
+    mainWindowHandle->setPosition(sf::Vector2i(0,0));
+
     while (mainWindow->isOpen())
     {
         sf::Event event;
@@ -70,8 +70,8 @@ int main()
             {
 
                 mousePosition = sf::Mouse::getPosition();
-                holdString = std::to_string(mousePosition.x);
-                debugFile->addTextToFile(holdString);
+                debugFile->addTextToFile(mousePosition.x);
+                debugFile->addTextToFile(mousePosition.y);
 
                 if(mainWindow->buttonClicked(mousePosition))
                 {

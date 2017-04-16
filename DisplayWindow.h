@@ -2,9 +2,11 @@
 #define DISPLAYWINDOW_H
 
 #include <cstdlib>
+#include <iostream>
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
 #include "Sprite.h"
+#include "FileHandler.h"
 
 struct ButtonInformation
 {

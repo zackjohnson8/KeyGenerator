@@ -3,15 +3,11 @@
 DisplayWindow::DisplayWindow(int width, int height)
 {
 
-    sf::Vector2u windowSize(width, height);
-    mainWindow = new sf::RenderWindow();
+    mainWindow = new sf::RenderWindow(sf::VideoMode(width, height), "My Program", sf::Style::Close);
 
     windowWidth = width;
     windowHeight = height;
     visibleWindow = true;
-    mainWindow->setSize(windowSize);
-
-    mainWindow->create(sf::VideoMode(width, height), "");
 
 }
 
@@ -86,12 +82,15 @@ void DisplayWindow::addButton(ButtonInformation& newButton)
 bool DisplayWindow::buttonClicked(sf::Vector2i& mousePosition)
 {
 
+    int titleBarSize = 39;
+
+    sf::Vector2i windowPosition;
     int buttonXPos = 0;
     int buttonYPos = 0;
     int buttonWidth = 0;
     int buttonHeight = 0;
 
-    for(int x = 0; x < buttonList.size(); x++)
+    for(int x = 0; x < /*buttonList.size()*/1; x++)
     {
 
         // Check the current button on top then push top to button of vector
@@ -99,15 +98,22 @@ bool DisplayWindow::buttonClicked(sf::Vector2i& mousePosition)
         buttonYPos = buttonList.at(x).yPos;
         buttonWidth = buttonList.at(x).width;
         buttonHeight = buttonList.at(x).height;
+        windowPosition = mainWindow->getPosition();
+
+        //mainWindow->titlebar
+
+        std::cout << (mousePosition.y - windowPosition.y - titleBarSize) << " " << buttonYPos
+        << " " << (mousePosition.y - windowPosition.y - titleBarSize) << " "
+         << buttonHeight + buttonYPos << std::endl;
 
         // Use said data to determine if mousePosition is over this spot
         if(
-            (mousePosition.x > buttonXPos && mousePosition.x < buttonWidth)
-            && (mousePosition.y > buttonYPos && mousePosition.y < buttonHeight)
+            ((mousePosition.x - windowPosition.x - 8) > buttonXPos && (mousePosition.x - windowPosition.x - 8) < (buttonWidth + buttonXPos + 3))
+            && ((mousePosition.y - windowPosition.y - titleBarSize) > buttonYPos && (mousePosition.y - windowPosition.y - titleBarSize) < (buttonHeight + buttonYPos + 2))
           )
         {
 
-
+            std::cout << ":LKJ:LKJ" << std::endl;
             return true;
 
         }
