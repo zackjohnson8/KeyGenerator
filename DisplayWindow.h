@@ -7,17 +7,8 @@
 #include <SFML/Audio.hpp>
 #include "Sprite.h"
 #include "FileHandler.h"
+#include "ButtonObj.h"
 
-struct ButtonInformation
-{
-
-    sf::RectangleShape* rectangleObject;
-    int width;
-    int height;
-    int xPos;
-    int yPos;
-
-};
 
 class DisplayWindow{
 
@@ -31,7 +22,7 @@ public:
     bool pollEvent(sf::Event& e);
     void drawObjects();
     void setPosition(); // TODO
-    void addButton(ButtonInformation& newButton);
+    void addButton(ButtonObj& newButton);
     sf::RenderWindow* getHandle();
 
     bool buttonClicked(sf::Vector2i&);
@@ -41,7 +32,7 @@ private:
     int windowHeight;
     bool visibleWindow;
 
-    std::vector<ButtonInformation> buttonList;
+    std::vector<ButtonObj> buttonList;
 
     sf::RenderWindow* mainWindow;
     sf::Color windowColor;

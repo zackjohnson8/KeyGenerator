@@ -63,7 +63,7 @@ bool DisplayWindow::pollEvent(sf::Event& e)
 
 }
 
-void DisplayWindow::addButton(ButtonInformation& newButton)
+void DisplayWindow::addButton(ButtonObj& newButton)
 {
 
     buttonList.push_back(newButton);

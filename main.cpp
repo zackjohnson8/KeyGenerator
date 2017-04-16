@@ -16,6 +16,7 @@ Date: 03/15/17
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
 #include "config.h"
+#include "ButtonObj.h"
 
 void fileHandlerDebugger( FileHandler* debuggerFile );
 
@@ -45,24 +46,14 @@ int main()
     mainWindowHandle->setPosition(sf::Vector2i(0,0));
 
     // Build the main windows buttons
-    ButtonInformation* displayButton = new ButtonInformation();
-    displayButton->width = 100;
-    displayButton->height = 50;
-    displayButton->xPos = 100;
-    displayButton->yPos = 100;
-    displayButton->rectangleObject = new sf::RectangleShape(sf::Vector2f(displayButton->width,displayButton->height));
-    displayButton->rectangleObject->setOutlineColor(sf::Color::Black);
-    displayButton->rectangleObject->setPosition(displayButton->xPos, displayButton->yPos);
+    ButtonObj* displayButton = new ButtonObj(100, 50, 100, 100);
+//    displayButton->rectangleObject->setOutlineColor(sf::Color::Black);
+//    displayButton->rectangleObject->setPosition(displayButton->xPos, displayButton->yPos);
     mainWindow->addButton(*displayButton);
 
-    ButtonInformation* musicButton = new ButtonInformation();
-    musicButton->width = 100;
-    musicButton->height = 50;
-    musicButton->xPos = 300;
-    musicButton->yPos = 100;
-    musicButton->rectangleObject = new sf::RectangleShape(sf::Vector2f(musicButton->width,musicButton->height));
-    musicButton->rectangleObject->setOutlineColor(sf::Color::Black);
-    musicButton->rectangleObject->setPosition(musicButton->xPos, musicButton->yPos);
+    ButtonObj* musicButton = new ButtonObj(100, 50, 300, 100);
+//    musicButton->rectangleObject->setOutlineColor(sf::Color::Black);
+//    musicButton->rectangleObject->setPosition(musicButton->xPos, musicButton->yPos);
     mainWindow->addButton(*musicButton);
 
 
