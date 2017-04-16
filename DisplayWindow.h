@@ -29,7 +29,7 @@ public:
     void close();
     bool isOpen();
     bool pollEvent(sf::Event& e);
-    void refreshWindow();
+    void drawObjects();
     void setPosition(); // TODO
     void addButton(ButtonInformation& newButton);
     sf::RenderWindow* getHandle();

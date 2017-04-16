@@ -34,13 +34,17 @@ int main()
 //========= MAIN LOOP =========================
 
     // Window Parameters
+    sf::Vector2i mousePosition;
     std::string holdString;
+    int holdValue;
 
     DisplayWindow* mainWindow = new DisplayWindow(500, 500);
     sf::RenderWindow* mainWindowHandle = mainWindow->getHandle();
     mainWindowHandle->clear(sf::Color::White);
-    int holdValue;
+    mainWindowHandle->setTitle("");
+    mainWindowHandle->setPosition(sf::Vector2i(0,0));
 
+    // Build the main windows buttons
     ButtonInformation* displayButton = new ButtonInformation();
     displayButton->width = 100;
     displayButton->height = 50;
@@ -51,10 +55,16 @@ int main()
     displayButton->rectangleObject->setPosition(displayButton->xPos, displayButton->yPos);
     mainWindow->addButton(*displayButton);
 
+    ButtonInformation* musicButton = new ButtonInformation();
+    musicButton->width = 100;
+    musicButton->height = 50;
+    musicButton->xPos = 300;
+    musicButton->yPos = 100;
+    musicButton->rectangleObject = new sf::RectangleShape(sf::Vector2f(musicButton->width,musicButton->height));
+    musicButton->rectangleObject->setOutlineColor(sf::Color::Black);
+    musicButton->rectangleObject->setPosition(musicButton->xPos, musicButton->yPos);
+    mainWindow->addButton(*musicButton);
 
-    sf::Vector2i mousePosition;
-
-    mainWindowHandle->setPosition(sf::Vector2i(0,0));
 
     while (mainWindow->isOpen())
     {
@@ -85,25 +95,12 @@ int main()
 
         }
 
-        // Left Click check
-        if(sf::Mouse::isButtonPressed(sf::Mouse::Left))
-        {
-
-
-            // determine location of click
-
-
-            // return button to open
-
-        }
-
         // Draw to background
         mainWindowHandle->clear(sf::Color::Black);
 
-        mainWindowHandle->draw(*displayButton->rectangleObject);
+        mainWindow->drawObjects();
 
-        // build buttons on the screen
-        mainWindow->refreshWindow();
+        mainWindowHandle->display();
 
     }
 

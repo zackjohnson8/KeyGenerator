@@ -32,15 +32,6 @@ void DisplayWindow::showWindow(bool status)
 
 }
 
-void DisplayWindow::refreshWindow()
-{
-
-    //mainWindow->clear(sf::Color::White); // keeps redrawing it as its open
-    mainWindow->display();
-
-
-}
-
 void DisplayWindow::setPosition()
 {
 
@@ -82,7 +73,7 @@ void DisplayWindow::addButton(ButtonInformation& newButton)
 bool DisplayWindow::buttonClicked(sf::Vector2i& mousePosition)
 {
 
-    int titleBarSize = 39;
+    int titleBarSize = 26;
 
     sf::Vector2i windowPosition;
     int buttonXPos = 0;
@@ -90,7 +81,7 @@ bool DisplayWindow::buttonClicked(sf::Vector2i& mousePosition)
     int buttonWidth = 0;
     int buttonHeight = 0;
 
-    for(int x = 0; x < /*buttonList.size()*/1; x++)
+    for(int x = 0; x < buttonList.size(); x++)
     {
 
         // Check the current button on top then push top to button of vector
@@ -102,14 +93,14 @@ bool DisplayWindow::buttonClicked(sf::Vector2i& mousePosition)
 
         //mainWindow->titlebar
 
-        std::cout << (mousePosition.y - windowPosition.y - titleBarSize) << " " << buttonYPos
-        << " " << (mousePosition.y - windowPosition.y - titleBarSize) << " "
-         << buttonHeight + buttonYPos << std::endl;
+//        std::cout << (mousePosition.y - windowPosition.y - titleBarSize) << " " << buttonYPos
+//        << " " << (mousePosition.y - windowPosition.y - titleBarSize) << " "
+//         << buttonHeight + buttonYPos << std::endl;
 
         // Use said data to determine if mousePosition is over this spot
         if(
-            ((mousePosition.x - windowPosition.x - 8) > buttonXPos && (mousePosition.x - windowPosition.x - 8) < (buttonWidth + buttonXPos + 3))
-            && ((mousePosition.y - windowPosition.y - titleBarSize) > buttonYPos && (mousePosition.y - windowPosition.y - titleBarSize) < (buttonHeight + buttonYPos + 2))
+            ((mousePosition.x - windowPosition.x + 1) > buttonXPos && (mousePosition.x - windowPosition.x) < (buttonWidth + buttonXPos + 2))
+            && ((mousePosition.y - windowPosition.y - titleBarSize) > buttonYPos && (mousePosition.y - windowPosition.y - titleBarSize) < (buttonHeight + buttonYPos + 1))
           )
         {
 
@@ -123,6 +114,17 @@ bool DisplayWindow::buttonClicked(sf::Vector2i& mousePosition)
 
     return false;
 
+}
+
+void DisplayWindow::drawObjects()
+{
+
+    for(int x = 0; x < buttonList.size(); x++)
+    {
+
+        mainWindow->draw(*(buttonList.at(x).rectangleObject));
+
+    }
 }
 
 
