@@ -162,23 +162,3 @@ void fileHandlerDebugger( FileHandler* debuggerFile )
 //    sf::Music* myMusic = new sf::Music();
 //    myMusic->openFromFile("mymusic.flac");
 //    myMusic->play();
-
-//    TODO: Add font to the program through reading from my filehandler class for debugging.
-//    sf::Font font;
-//    if(!font.loadFromFile("ClearSans-Regular.ttf"))
-//    {
-//
-//        debugFile->addTextToFile("Error loading font");
-//
-//    }else
-//    {
-//
-//        debugFile->addTextToFile("Added the font to the program");
-//
-//    }
-
-//    sf::Text debugText;
-//    debugText.setFont(font);
-//    debugText.setCharacterSize(16);
-//    debugText.setString("This Text");
-//    debugText.setColor(sf::Color::Red);
