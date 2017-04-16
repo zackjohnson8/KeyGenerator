@@ -5,6 +5,17 @@
 #include <SFML/Audio.hpp>
 #include "Sprite.h"
 
+struct ButtonInformation
+{
+
+    sf::RectangleShape* rectangleObject;
+    int width;
+    int height;
+    int xPos;
+    int yPos;
+
+};
+
 class DisplayWindow{
 
 public:
@@ -17,6 +28,7 @@ public:
     bool pollEvent(sf::Event& e);
     void refreshWindow();
     void setPosition(); // TODO
+    void addButton(ButtonInformation* newButton);
 
     sf::RenderWindow* getHandle();
 

@@ -39,9 +39,7 @@ void DisplayWindow::showWindow(bool status)
 void DisplayWindow::refreshWindow()
 {
 
-    sf::Sprite backgroundSprite;
-
-    mainWindow->clear(sf::Color::White); // keeps redrawing it as its open
+    //mainWindow->clear(sf::Color::White); // keeps redrawing it as its open
     mainWindow->display();
 
 
@@ -75,5 +73,12 @@ bool DisplayWindow::pollEvent(sf::Event& e)
 
     return mainWindow->pollEvent(e);
 
+
+}
+
+void DisplayWindow::addButton(ButtonInformation* newButton)
+{
+
+    mainWindow->draw(*(newButton->rectangleObject));
 
 }

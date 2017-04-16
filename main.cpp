@@ -17,6 +17,8 @@ Date: 03/15/17
 #include <SFML/Audio.hpp>
 #include "config.h"
 
+
+
 void fileHandlerDebugger( FileHandler* debuggerFile );
 
 int main()
@@ -39,6 +41,16 @@ int main()
     mainWindowHandle->clear(sf::Color::White);
     int holdValue;
 
+    ButtonInformation* displayButton = new ButtonInformation();
+
+    displayButton->width = 100;
+    displayButton->height = 50;
+    displayButton->xPos = 100;
+    displayButton->yPos = 100;
+    displayButton->rectangleObject = new sf::RectangleShape(sf::Vector2f(displayButton->width,displayButton->height));
+    displayButton->rectangleObject->setOutlineColor(sf::Color::Black);
+
+
 
     while (mainWindow->isOpen())
     {
@@ -46,11 +58,27 @@ int main()
         while (mainWindow->pollEvent(event))
         {
             if (event.type == sf::Event::Closed)
+            {
                 mainWindow->close();
+            }
+
         }
 
-        // Draw to background
 
+        if(sf::Mouse::isButtonPressed(sf::Mouse::Left))
+        {
+
+            // left click
+
+
+        }
+
+
+        // Draw to background
+        mainWindowHandle->clear(sf::Color::Black);
+        mainWindow->addButton(displayButton);
+
+        // build buttons on the screen
         mainWindow->refreshWindow();
 
     }
@@ -63,36 +91,9 @@ int main()
 
     //delete myMusic;
     delete mainWindow;
+    delete displayButton;
 
-//============= OLD CODE FROM EXPERIMENTING ========== //////
 
-//========== SFML Audio library music playing ===========================//
-
-//    Use the music class
-
-//    sf::Music* myMusic = new sf::Music();
-//    myMusic->openFromFile("mymusic.flac");
-//    myMusic->play();
-
-//    TODO: Add font to the program through reading from my filehandler class for debugging.
-//    sf::Font font;
-//    if(!font.loadFromFile("ClearSans-Regular.ttf"))
-//    {
-//
-//        debugFile->addTextToFile("Error loading font");
-//
-//    }else
-//    {
-//
-//        debugFile->addTextToFile("Added the font to the program");
-//
-//    }
-
-//    sf::Text debugText;
-//    debugText.setFont(font);
-//    debugText.setCharacterSize(16);
-//    debugText.setString("This Text");
-//    debugText.setColor(sf::Color::Red);
 
 
     return(0);
@@ -127,3 +128,36 @@ void fileHandlerDebugger( FileHandler* debuggerFile )
     //debuggerFile->deleteBySearch(myAddition);
 
 }
+
+
+// LEFT OVER CODE FOR LATER /////////////////////////////////////////////////
+
+//============= OLD CODE FROM EXPERIMENTING ========== //////
+
+//========== SFML Audio library music playing ===========================//
+
+//    Use the music class
+
+//    sf::Music* myMusic = new sf::Music();
+//    myMusic->openFromFile("mymusic.flac");
+//    myMusic->play();
+
+//    TODO: Add font to the program through reading from my filehandler class for debugging.
+//    sf::Font font;
+//    if(!font.loadFromFile("ClearSans-Regular.ttf"))
+//    {
+//
+//        debugFile->addTextToFile("Error loading font");
+//
+//    }else
+//    {
+//
+//        debugFile->addTextToFile("Added the font to the program");
+//
+//    }
+
+//    sf::Text debugText;
+//    debugText.setFont(font);
+//    debugText.setCharacterSize(16);
+//    debugText.setString("This Text");
+//    debugText.setColor(sf::Color::Red);
