@@ -243,6 +243,33 @@ FileHandler.cpp.s:
 	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/FileHandler.cpp.s
 .PHONY : FileHandler.cpp.s
 
+Sprite.o: Sprite.cpp.o
+
+.PHONY : Sprite.o
+
+# target to build an object file
+Sprite.cpp.o:
+	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/Sprite.cpp.o
+.PHONY : Sprite.cpp.o
+
+Sprite.i: Sprite.cpp.i
+
+.PHONY : Sprite.i
+
+# target to preprocess a source file
+Sprite.cpp.i:
+	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/Sprite.cpp.i
+.PHONY : Sprite.cpp.i
+
+Sprite.s: Sprite.cpp.s
+
+.PHONY : Sprite.s
+
+# target to generate assembly for a file
+Sprite.cpp.s:
+	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/Sprite.cpp.s
+.PHONY : Sprite.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -291,6 +318,9 @@ help:
 	@echo "... FileHandler.o"
 	@echo "... FileHandler.i"
 	@echo "... FileHandler.s"
+	@echo "... Sprite.o"
+	@echo "... Sprite.i"
+	@echo "... Sprite.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

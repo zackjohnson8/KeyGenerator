@@ -11,6 +11,8 @@ DisplayWindow.h
 /home/zack/git-repos/KeyGenerator/DisplayWindow.h
 
 /home/zack/git-repos/KeyGenerator/DisplayWindow.h
+cstdlib
+-
 SFML/Graphics.hpp
 -
 SFML/Audio.hpp
@@ -35,6 +37,10 @@ ctime
 /home/zack/git-repos/KeyGenerator/FileHandler.h
 string
 -
+
+/home/zack/git-repos/KeyGenerator/Sprite.cpp
+Sprite.h
+/home/zack/git-repos/KeyGenerator/Sprite.h
 
 /home/zack/git-repos/KeyGenerator/Sprite.h
 

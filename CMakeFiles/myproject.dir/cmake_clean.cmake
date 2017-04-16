@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/myproject.dir/main.cpp.o"
   "CMakeFiles/myproject.dir/FileHandler.cpp.o"
+  "CMakeFiles/myproject.dir/Sprite.cpp.o"
   "CMakeFiles/myproject.dir/DisplayWindow.cpp.o"
   "myproject.pdb"
   "myproject"

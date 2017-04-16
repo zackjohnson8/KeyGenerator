@@ -8,6 +8,9 @@ CMakeFiles/myproject.dir/DisplayWindow.cpp.o
 CMakeFiles/myproject.dir/FileHandler.cpp.o
  /home/zack/git-repos/KeyGenerator/FileHandler.cpp
  /home/zack/git-repos/KeyGenerator/FileHandler.h
+CMakeFiles/myproject.dir/Sprite.cpp.o
+ /home/zack/git-repos/KeyGenerator/Sprite.cpp
+ /home/zack/git-repos/KeyGenerator/Sprite.h
 CMakeFiles/myproject.dir/main.cpp.o
  /home/zack/git-repos/KeyGenerator/DisplayWindow.h
  /home/zack/git-repos/KeyGenerator/FileHandler.h

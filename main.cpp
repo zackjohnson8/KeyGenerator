@@ -36,21 +36,25 @@ int main()
 //========= MAIN LOOP =========================
 
     // Window Parameters
+    std::string holdString;
+
     DisplayWindow* mainWindow = new DisplayWindow(500, 500);
     sf::RenderWindow* mainWindowHandle = mainWindow->getHandle();
     mainWindowHandle->clear(sf::Color::White);
     int holdValue;
 
     ButtonInformation* displayButton = new ButtonInformation();
-
     displayButton->width = 100;
     displayButton->height = 50;
     displayButton->xPos = 100;
     displayButton->yPos = 100;
     displayButton->rectangleObject = new sf::RectangleShape(sf::Vector2f(displayButton->width,displayButton->height));
     displayButton->rectangleObject->setOutlineColor(sf::Color::Black);
+    displayButton->rectangleObject->setPosition(displayButton->xPos, displayButton->yPos);
+    mainWindow->addButton(*displayButton);
 
 
+    sf::Vector2i mousePosition;
 
     while (mainWindow->isOpen())
     {
@@ -62,21 +66,41 @@ int main()
                 mainWindow->close();
             }
 
+            if (event.type == sf::Event::MouseButtonPressed)
+            {
+
+                mousePosition = sf::Mouse::getPosition();
+                holdString = std::to_string(mousePosition.x);
+                debugFile->addTextToFile(holdString);
+
+                if(mainWindow->buttonClicked(mousePosition))
+                {
+
+                    debugFile->addTextToFile("buttonClicked");
+
+                }
+
+
+            }
+
         }
 
-
+        // Left Click check
         if(sf::Mouse::isButtonPressed(sf::Mouse::Left))
         {
 
-            // left click
 
+            // determine location of click
+
+
+            // return button to open
 
         }
 
-
         // Draw to background
         mainWindowHandle->clear(sf::Color::Black);
-        mainWindow->addButton(displayButton);
+
+        mainWindowHandle->draw(*displayButton->rectangleObject);
 
         // build buttons on the screen
         mainWindow->refreshWindow();

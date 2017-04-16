@@ -76,9 +76,73 @@ bool DisplayWindow::pollEvent(sf::Event& e)
 
 }
 
-void DisplayWindow::addButton(ButtonInformation* newButton)
+void DisplayWindow::addButton(ButtonInformation& newButton)
 {
 
-    mainWindow->draw(*(newButton->rectangleObject));
+    buttonList.push_back(newButton);
 
 }
+
+bool DisplayWindow::buttonClicked(sf::Vector2i& mousePosition)
+{
+
+    int buttonXPos = 0;
+    int buttonYPos = 0;
+    int buttonWidth = 0;
+    int buttonHeight = 0;
+
+    for(int x = 0; x < buttonList.size(); x++)
+    {
+
+        // Check the current button on top then push top to button of vector
+        buttonXPos = buttonList.at(x).xPos;
+        buttonYPos = buttonList.at(x).yPos;
+        buttonWidth = buttonList.at(x).width;
+        buttonHeight = buttonList.at(x).height;
+
+        // Use said data to determine if mousePosition is over this spot
+        if(
+            (mousePosition.x > buttonXPos && mousePosition.x < buttonWidth)
+            && (mousePosition.y > buttonYPos && mousePosition.y < buttonHeight)
+          )
+        {
+
+
+            return true;
+
+        }
+
+
+    }
+
+    return false;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
