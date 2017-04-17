@@ -7,7 +7,8 @@ ButtonObj::ButtonObj()
     height = 0;
     xPos = 0;
     yPos = 0;
-    rectObject = NULL:
+    rectObject = NULL;
+
 
 }
 
@@ -18,21 +19,61 @@ ButtonObj::ButtonObj(int setWidth, int setHeight, int setXPos, int setYPos)
     height = setHeight;
     xPos = setXPos;
     yPos = setYPos;
-    rectObject = new sf::RectangleShape(sf::Vector2f(setWidth, setHeight))
+    rectObject = new sf::RectangleShape(sf::Vector2f(setWidth, setHeight));
+    rectObject->setPosition(xPos, yPos);
 
 }
 
 ButtonObj::~ButtonObj()
 {
 
-    delete rectObject();
+    if(rectObject != NULL)
+    {
 
+       // delete rectObject;
+
+    }
 }
 
-sf::RectangleShape* getRectHandle()
+sf::RectangleShape* ButtonObj::getRectHandle()
 {
 
 
     return rectObject;
+
+}
+
+int ButtonObj::getWidth()
+{
+
+    return width;
+
+}
+
+int ButtonObj::getHeight()
+{
+
+    return height;
+
+}
+
+int ButtonObj::getXPos()
+{
+
+    return xPos;
+
+}
+
+int ButtonObj::getYPos()
+{
+
+    return yPos;
+
+}
+
+void ButtonObj::setButtonColor(sf::Color& buttonColor)
+{
+
+    rectObject->setFillColor(buttonColor);
 
 }

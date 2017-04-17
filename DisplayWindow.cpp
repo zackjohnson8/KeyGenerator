@@ -85,10 +85,10 @@ bool DisplayWindow::buttonClicked(sf::Vector2i& mousePosition)
     {
 
         // Check the current button on top then push top to button of vector
-        buttonXPos = buttonList.at(x).xPos;
-        buttonYPos = buttonList.at(x).yPos;
-        buttonWidth = buttonList.at(x).width;
-        buttonHeight = buttonList.at(x).height;
+        buttonXPos = buttonList.at(x).getXPos();
+        buttonYPos = buttonList.at(x).getYPos();
+        buttonWidth = buttonList.at(x).getWidth();
+        buttonHeight = buttonList.at(x).getHeight();
         windowPosition = mainWindow->getPosition();
 
         //mainWindow->titlebar
@@ -104,7 +104,7 @@ bool DisplayWindow::buttonClicked(sf::Vector2i& mousePosition)
           )
         {
 
-            std::cout << ":LKJ:LKJ" << std::endl;
+            std::cout << "Button clicked" << std::endl;
             return true;
 
         }
@@ -122,7 +122,7 @@ void DisplayWindow::drawObjects()
     for(int x = 0; x < buttonList.size(); x++)
     {
 
-        mainWindow->draw(*(buttonList.at(x).rectangleObject));
+        mainWindow->draw(*(buttonList.at(x).getRectHandle()));
 
     }
 }

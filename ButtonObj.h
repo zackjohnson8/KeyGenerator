@@ -17,8 +17,9 @@ public:
     int getHeight();
     int getXPos();
     int getYPos();
-
     sf::RectangleShape* getRectHandle();
+
+    void setButtonColor(sf::Color& buttonColor);
 
 private:
     sf::RectangleShape* rectObject;

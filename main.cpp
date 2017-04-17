@@ -52,6 +52,7 @@ int main()
     mainWindow->addButton(*displayButton);
 
     ButtonObj* musicButton = new ButtonObj(100, 50, 300, 100);
+    musicButton->setColor();
 //    musicButton->rectangleObject->setOutlineColor(sf::Color::Black);
 //    musicButton->rectangleObject->setPosition(musicButton->xPos, musicButton->yPos);
     mainWindow->addButton(*musicButton);
@@ -87,7 +88,7 @@ int main()
         }
 
         // Draw to background
-        mainWindowHandle->clear(sf::Color::Black);
+        mainWindowHandle->clear(sf::Color::White);
 
         mainWindow->drawObjects();
 
@@ -102,8 +103,8 @@ int main()
 // This can be writing to a log file in the destructor.
 
     //delete myMusic;
-    delete mainWindow;
-    delete displayButton;
+    //delete mainWindow;
+    //delete displayButton;
 
 
 

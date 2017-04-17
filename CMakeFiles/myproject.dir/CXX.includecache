@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+/home/zack/git-repos/KeyGenerator/ButtonObj.cpp
+ButtonObj.h
+/home/zack/git-repos/KeyGenerator/ButtonObj.h
+
 /home/zack/git-repos/KeyGenerator/ButtonObj.h
 cstdlib
 -
