@@ -85,10 +85,10 @@ bool DisplayWindow::buttonClicked(sf::Vector2i& mousePosition)
     {
 
         // Check the current button on top then push top to button of vector
-        buttonXPos = buttonList.at(x).getXPos();
-        buttonYPos = buttonList.at(x).getYPos();
-        buttonWidth = buttonList.at(x).getWidth();
-        buttonHeight = buttonList.at(x).getHeight();
+        buttonXPos = buttonList.at(x).getPosition().x;
+        buttonYPos = buttonList.at(x).getPosition().y;
+        buttonWidth = buttonList.at(x).getSize().x;
+        buttonHeight = buttonList.at(x).getSize().y;
         windowPosition = mainWindow->getPosition();
 
         // Use said data to determine if mousePosition is over this spot
@@ -124,10 +124,10 @@ ButtonObj* DisplayWindow::getButtonAtMouse(sf::Vector2i& mousePosition)
     {
 
         // Check the current button on top then push top to button of vector
-        buttonXPos = buttonList.at(x).getXPos();
-        buttonYPos = buttonList.at(x).getYPos();
-        buttonWidth = buttonList.at(x).getWidth();
-        buttonHeight = buttonList.at(x).getHeight();
+        buttonXPos = buttonList.at(x).getPosition().x;
+        buttonYPos = buttonList.at(x).getPosition().y;
+        buttonWidth = buttonList.at(x).getSize().x;
+        buttonHeight = buttonList.at(x).getSize().y;
         windowPosition = mainWindow->getPosition();
 
         // Use said data to determine if mousePosition is over this spot
@@ -157,6 +157,7 @@ void DisplayWindow::drawObjects()
         mainWindow->draw(*(buttonList.at(x).getRectHandle()));
 
     }
+
 }
 
 

@@ -44,14 +44,17 @@ int main()
     mainWindowHandle->setTitle("");
     mainWindowHandle->setPosition(sf::Vector2i(0,0));
 
-    // Build the main windows buttons
-    // TODO(Zack): Maybe better to add these buttons to the mainWindow class? Possible later if you want.
-    ButtonObj* displayButton = new ButtonObj(100, 50, 100, 100);
-    displayButton->setButtonColor(sf::Color::Black);
+    // Build mainWindow Display items
+    ButtonObj* displayButton = new ButtonObj();
+    displayButton->setSize(sf::Vector2f(100, 50));
+    displayButton->setPosition(100, 100);
+    displayButton->setFillColor(sf::Color::Black);
     mainWindow->addButton(*displayButton);
 
-    ButtonObj* musicButton = new ButtonObj(100, 50, 300, 100);
-    musicButton->setButtonColor(sf::Color::Black);
+    ButtonObj* musicButton = new ButtonObj();
+    musicButton->setSize(sf::Vector2f(100, 50));
+    musicButton->setPosition(300, 100);
+    musicButton->setFillColor(sf::Color::Black);
     mainWindow->addButton(*musicButton);
 
 
@@ -73,11 +76,11 @@ int main()
                 if(mainWindow->buttonClicked(mousePosition))
                 {
 
+                    std::cout << "CLICKED" << std::endl;
                     // Execute the function in the button that was clicked
                     ButtonObj* myButton = mainWindow->getButtonAtMouse(mousePosition);
-//                    myButton->
+                    myButton->startBtnFunction(AUTO_CLICKER);
 
-                    debugFile->addTextToFile("buttonClicked");
 
                 }
 

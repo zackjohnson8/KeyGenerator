@@ -1,74 +1,42 @@
 #include "ButtonObj.h"
 
-ButtonObj::ButtonObj()
-{
-
-    width = 0;
-    height = 0;
-    xPos = 0;
-    yPos = 0;
-    rectObject = NULL;
-
-
-}
-
-ButtonObj::ButtonObj(int setWidth, int setHeight, int setXPos, int setYPos)
-{
-
-    width = setWidth;
-    height = setHeight;
-    xPos = setXPos;
-    yPos = setYPos;
-    rectObject = new sf::RectangleShape(sf::Vector2f(setWidth, setHeight));
-    rectObject->setPosition(xPos, yPos);
-
-}
-
-ButtonObj::~ButtonObj()
-{
-
-
-}
-
 sf::RectangleShape* ButtonObj::getRectHandle()
 {
 
-
-    return rectObject;
+    return this;
 
 }
 
 int ButtonObj::getWidth()
 {
 
-    return width;
+    return this->getSize().x;
 
 }
 
 int ButtonObj::getHeight()
 {
 
-    return height;
+    return this->getSize().y;
 
 }
 
-int ButtonObj::getXPos()
+void ButtonObj::setBtnFunction(const ButtonFunct)
 {
 
-    return xPos;
+
 
 }
 
-int ButtonObj::getYPos()
+void ButtonObj::startBtnFunction(const ButtonFunct)
 {
 
-    return yPos;
+    std::cout << "START" << std::endl;
 
 }
 
-void ButtonObj::setButtonColor(const sf::Color buttonColor)
-{
 
-    rectObject->setFillColor(buttonColor);
 
-}
+
+
+

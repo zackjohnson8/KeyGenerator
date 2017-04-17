@@ -5,28 +5,29 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
 
-class ButtonObj
+enum ButtonFunct
 {
 
+    AUTO_CLICKER
+
+
+};
+
+class ButtonObj : public sf::RectangleShape {
+
 public:
-    ButtonObj();
-    ButtonObj(int setWidth, int setHeight, int setXPos, int setYPos);
-    ~ButtonObj();
 
     int getWidth();
     int getHeight();
-    int getXPos();
-    int getYPos();
     sf::RectangleShape* getRectHandle();
 
-    void setButtonColor(const sf::Color buttonColor);
+    void setBtnFunction(const ButtonFunct);
+
+    void startBtnFunction(const ButtonFunct);
 
 private:
-    sf::RectangleShape* rectObject;
-    int width;
-    int height;
-    int xPos;
-    int yPos;
+
+    ButtonFunct BtnFunctionality;
 
 
 };
