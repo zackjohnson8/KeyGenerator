@@ -41,20 +41,17 @@ int main()
 
     DisplayWindow* mainWindow = new DisplayWindow(500, 500);
     sf::RenderWindow* mainWindowHandle = mainWindow->getHandle();
-    mainWindowHandle->clear(sf::Color::White);
     mainWindowHandle->setTitle("");
     mainWindowHandle->setPosition(sf::Vector2i(0,0));
 
     // Build the main windows buttons
+    // TODO(Zack): Maybe better to add these buttons to the mainWindow class? Possible later if you want.
     ButtonObj* displayButton = new ButtonObj(100, 50, 100, 100);
-//    displayButton->rectangleObject->setOutlineColor(sf::Color::Black);
-//    displayButton->rectangleObject->setPosition(displayButton->xPos, displayButton->yPos);
+    displayButton->setButtonColor(sf::Color::Black);
     mainWindow->addButton(*displayButton);
 
     ButtonObj* musicButton = new ButtonObj(100, 50, 300, 100);
-    musicButton->setColor();
-//    musicButton->rectangleObject->setOutlineColor(sf::Color::Black);
-//    musicButton->rectangleObject->setPosition(musicButton->xPos, musicButton->yPos);
+    musicButton->setButtonColor(sf::Color::Black);
     mainWindow->addButton(*musicButton);
 
 
@@ -72,11 +69,13 @@ int main()
             {
 
                 mousePosition = sf::Mouse::getPosition();
-                debugFile->addTextToFile(mousePosition.x);
-                debugFile->addTextToFile(mousePosition.y);
 
                 if(mainWindow->buttonClicked(mousePosition))
                 {
+
+                    // Execute the function in the button that was clicked
+                    ButtonObj* myButton = mainWindow->getButtonAtMouse(mousePosition);
+//                    myButton->
 
                     debugFile->addTextToFile("buttonClicked");
 
@@ -103,10 +102,7 @@ int main()
 // This can be writing to a log file in the destructor.
 
     //delete myMusic;
-    //delete mainWindow;
-    //delete displayButton;
-
-
+    delete mainWindow;
 
 
     return(0);

@@ -24,6 +24,7 @@ public:
     void setPosition(); // TODO
     void addButton(ButtonObj& newButton);
     sf::RenderWindow* getHandle();
+    ButtonObj* getButtonAtMouse(sf::Vector2i&);
 
     bool buttonClicked(sf::Vector2i&);
 

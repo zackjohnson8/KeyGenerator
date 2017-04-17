@@ -19,7 +19,7 @@ public:
     int getYPos();
     sf::RectangleShape* getRectHandle();
 
-    void setButtonColor(sf::Color& buttonColor);
+    void setButtonColor(const sf::Color buttonColor);
 
 private:
     sf::RectangleShape* rectObject;

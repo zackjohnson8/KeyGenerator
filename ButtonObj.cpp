@@ -27,12 +27,7 @@ ButtonObj::ButtonObj(int setWidth, int setHeight, int setXPos, int setYPos)
 ButtonObj::~ButtonObj()
 {
 
-    if(rectObject != NULL)
-    {
 
-       // delete rectObject;
-
-    }
 }
 
 sf::RectangleShape* ButtonObj::getRectHandle()
@@ -71,7 +66,7 @@ int ButtonObj::getYPos()
 
 }
 
-void ButtonObj::setButtonColor(sf::Color& buttonColor)
+void ButtonObj::setButtonColor(const sf::Color buttonColor)
 {
 
     rectObject->setFillColor(buttonColor);
