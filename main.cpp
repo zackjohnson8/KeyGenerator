@@ -49,12 +49,16 @@ int main()
     displayButton->setSize(sf::Vector2f(100, 50));
     displayButton->setPosition(100, 100);
     displayButton->setFillColor(sf::Color::Black);
+    displayButton->setOutlineThickness(5);
+    displayButton->setOutlineColor(sf::Color::Blue);
     mainWindow->addButton(*displayButton);
 
     ButtonObj* musicButton = new ButtonObj();
     musicButton->setSize(sf::Vector2f(100, 50));
     musicButton->setPosition(300, 100);
     musicButton->setFillColor(sf::Color::Black);
+    musicButton->setOutlineThickness(5);
+    musicButton->setOutlineColor(sf::Color::Blue);
     mainWindow->addButton(*musicButton);
 
 
