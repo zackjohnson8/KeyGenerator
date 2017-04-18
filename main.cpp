@@ -35,30 +35,35 @@ int main()
 //========= MAIN LOOP =========================
 
     // Window Parameters
+    sf::Vector2f mainWindowSize = sf::Vector2f(500, 500);
+    sf::Vector2f addButtonSize = sf::Vector2f(mainWindowSize.x/2, 50);
+    sf::Vector2f removeButtonSize = sf::Vector2f(mainWindowSize.x/2, 50);
+    int buttonBoarderSize = 1;
+
     sf::Vector2i mousePosition;
     std::string holdString;
     int holdValue;
 
     DisplayWindow* mainWindow = new DisplayWindow();
-    mainWindow->create(sf::VideoMode(500, 500), "My Program", sf::Style::Close);
+    mainWindow->create(sf::VideoMode(mainWindowSize.x, mainWindowSize.y), "My Program", sf::Style::Close);
     mainWindow->setPosition(sf::Vector2i(0,0));
 
     // Build mainWindow Display items
 
     // ADD / REMOVE BUTTONS
     ButtonObj* displayButton = new ButtonObj();
-    displayButton->setSize(sf::Vector2f(100, 50));
-    displayButton->setPosition(100, 100);
+    displayButton->setSize(addButtonSize);
+    displayButton->setPosition(buttonBoarderSize, mainWindow->getSize().y - addButtonSize.y - buttonBoarderSize);
     displayButton->setFillColor(sf::Color::Black);
-    displayButton->setOutlineThickness(5);
+    displayButton->setOutlineThickness(buttonBoarderSize);
     displayButton->setOutlineColor(sf::Color::Blue);
     mainWindow->addButton(*displayButton);
 
     ButtonObj* musicButton = new ButtonObj();
-    musicButton->setSize(sf::Vector2f(100, 50));
-    musicButton->setPosition(300, 100);
+    musicButton->setSize(removeButtonSize);
+    musicButton->setPosition(mainWindow->getSize().x - removeButtonSize.x - buttonBoarderSize, mainWindow->getSize().y - removeButtonSize.y - buttonBoarderSize);
     musicButton->setFillColor(sf::Color::Black);
-    musicButton->setOutlineThickness(5);
+    musicButton->setOutlineThickness(buttonBoarderSize);
     musicButton->setOutlineColor(sf::Color::Blue);
     mainWindow->addButton(*musicButton);
 
