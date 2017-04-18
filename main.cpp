@@ -39,12 +39,13 @@ int main()
     std::string holdString;
     int holdValue;
 
-    DisplayWindow* mainWindow = new DisplayWindow(500, 500);
-    sf::RenderWindow* mainWindowHandle = mainWindow->getHandle();
-    mainWindowHandle->setTitle("");
-    mainWindowHandle->setPosition(sf::Vector2i(0,0));
+    DisplayWindow* mainWindow = new DisplayWindow();
+    mainWindow->create(sf::VideoMode(500, 500), "My Program", sf::Style::Close);
+    mainWindow->setPosition(sf::Vector2i(0,0));
 
     // Build mainWindow Display items
+
+    // ADD / REMOVE BUTTONS
     ButtonObj* displayButton = new ButtonObj();
     displayButton->setSize(sf::Vector2f(100, 50));
     displayButton->setPosition(100, 100);
@@ -60,6 +61,7 @@ int main()
     musicButton->setOutlineThickness(5);
     musicButton->setOutlineColor(sf::Color::Blue);
     mainWindow->addButton(*musicButton);
+
 
 
     while (mainWindow->isOpen())
@@ -94,11 +96,11 @@ int main()
         }
 
         // Draw to background
-        mainWindowHandle->clear(sf::Color::White);
+        mainWindow->clear(sf::Color::White);
 
         mainWindow->drawObjects();
 
-        mainWindowHandle->display();
+        mainWindow->display();
 
     }
 

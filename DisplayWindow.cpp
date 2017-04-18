@@ -1,67 +1,5 @@
 #include "DisplayWindow.h"
 
-DisplayWindow::DisplayWindow(int width, int height)
-{
-
-    mainWindow = new sf::RenderWindow(sf::VideoMode(width, height), "My Program", sf::Style::Close);
-
-    windowWidth = width;
-    windowHeight = height;
-    visibleWindow = true;
-
-}
-
-DisplayWindow::~DisplayWindow()
-{
-
-    delete mainWindow;
-
-}
-
-sf::RenderWindow* DisplayWindow::getHandle()
-{
-
-    return mainWindow;
-
-}
-
-void DisplayWindow::showWindow(bool status)
-{
-
-    visibleWindow = status;
-
-}
-
-void DisplayWindow::setPosition()
-{
-
-
-
-}
-
-void DisplayWindow::close()
-{
-
-
-    mainWindow->close();
-
-}
-
-bool DisplayWindow::isOpen()
-{
-
-    return mainWindow->isOpen();
-
-}
-
-bool DisplayWindow::pollEvent(sf::Event& e)
-{
-
-
-    return mainWindow->pollEvent(e);
-
-
-}
 
 void DisplayWindow::addButton(ButtonObj& newButton)
 {
@@ -89,7 +27,7 @@ bool DisplayWindow::buttonClicked(sf::Vector2i& mousePosition)
         buttonYPos = buttonList.at(x).getPosition().y;
         buttonWidth = buttonList.at(x).getSize().x;
         buttonHeight = buttonList.at(x).getSize().y;
-        windowPosition = mainWindow->getPosition();
+        windowPosition = this->getPosition();
 
         // Use said data to determine if mousePosition is over this spot
         if(
@@ -128,7 +66,7 @@ ButtonObj* DisplayWindow::getButtonAtMouse(sf::Vector2i& mousePosition)
         buttonYPos = buttonList.at(x).getPosition().y;
         buttonWidth = buttonList.at(x).getSize().x;
         buttonHeight = buttonList.at(x).getSize().y;
-        windowPosition = mainWindow->getPosition();
+        windowPosition = this->getPosition();
 
         // Use said data to determine if mousePosition is over this spot
         if(
@@ -154,9 +92,10 @@ void DisplayWindow::drawObjects()
     for(int x = 0; x < buttonList.size(); x++)
     {
 
-        mainWindow->draw(*(buttonList.at(x).getRectHandle()));
+        this->draw(*(buttonList.at(x).getRectHandle()));
 
     }
+
 
 }
 

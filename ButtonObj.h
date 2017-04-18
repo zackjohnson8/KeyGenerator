@@ -13,7 +13,8 @@ enum ButtonFunct
 
 };
 
-class ButtonObj : public sf::RectangleShape {
+class ButtonObj : public sf::RectangleShape
+{
 
 public:
 
