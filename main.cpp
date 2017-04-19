@@ -68,7 +68,7 @@ int main()
     ButtonObj* addButton = new ButtonObj();
     addButton->setSize(addButtonSize);
     addButton->setPosition(buttonBoarderSize, mainWindow->getSize().y - addButtonSize.y - buttonBoarderSize);
-    addButton->setFillColor(sf::Color::Black);
+    addButton->setFillColor(sf::Color::White);
     addButton->setOutlineThickness(buttonBoarderSize);
     addButton->setOutlineColor(sf::Color::Blue);
     mainWindow->addButton(*addButton);
@@ -76,7 +76,7 @@ int main()
     ButtonObj* removeButton = new ButtonObj();
     removeButton->setSize(removeButtonSize);
     removeButton->setPosition(mainWindow->getSize().x - removeButtonSize.x - buttonBoarderSize, mainWindow->getSize().y - removeButtonSize.y - buttonBoarderSize);
-    removeButton->setFillColor(sf::Color::Black);
+    removeButton->setFillColor(sf::Color::White);
     removeButton->setOutlineThickness(buttonBoarderSize);
     removeButton->setOutlineColor(sf::Color::Blue);
     mainWindow->addButton(*removeButton);
@@ -84,17 +84,21 @@ int main()
     // ADD TEXTS
     TextObj* addButtonText = new TextObj();
     addButtonText->setFont(font);
-    addButtonText->setColor(sf::Color::Red);
+    addButtonText->setStyle(sf::Text::Bold);
+    addButtonText->setCharacterSize(16);
+    addButtonText->setColor(sf::Color::Black);
     addButtonText->setString("add");
-    addButtonText->setTextLocation(addButton);
+    addButtonText->setTextLocationCentered(addButton);
     mainWindow->addText(*addButtonText);
 
 
     TextObj* removeButtonText = new TextObj();
     removeButtonText->setFont(font);
-    removeButtonText->setColor(sf::Color::Red);
+    removeButtonText->setStyle(sf::Text::Bold);
+    removeButtonText->setCharacterSize(16);
+    removeButtonText->setColor(sf::Color::Black);
     removeButtonText->setString("remove");
-    removeButtonText->setTextLocation(removeButton);
+    removeButtonText->setTextLocationCentered(removeButton);
     mainWindow->addText(*removeButtonText);
 
 //////////// MAIN PROGRAM START //////////////////////////

@@ -10,7 +10,7 @@ class TextObj : public sf::Text
 {
 
 public:
-    void setTextLocation(ButtonObj* );
+    void setTextLocationCentered(ButtonObj* );
 
 private:
 
