@@ -37,6 +37,8 @@ FileHandler.h
 /home/zack/git-repos/KeyGenerator/FileHandler.h
 ButtonObj.h
 /home/zack/git-repos/KeyGenerator/ButtonObj.h
+TextObj.h
+/home/zack/git-repos/KeyGenerator/TextObj.h
 
 /home/zack/git-repos/KeyGenerator/FileHandler.cpp
 FileHandler.h
@@ -62,6 +64,20 @@ Sprite.h
 
 /home/zack/git-repos/KeyGenerator/Sprite.h
 
+/home/zack/git-repos/KeyGenerator/TextObj.cpp
+TextObj.h
+/home/zack/git-repos/KeyGenerator/TextObj.h
+
+/home/zack/git-repos/KeyGenerator/TextObj.h
+cstdlib
+-
+iostream
+-
+SFML/Graphics.hpp
+-
+ButtonObj.h
+/home/zack/git-repos/KeyGenerator/ButtonObj.h
+
 /home/zack/git-repos/KeyGenerator/config.h
 
 /home/zack/git-repos/KeyGenerator/main.cpp
@@ -83,4 +99,6 @@ config.h
 /home/zack/git-repos/KeyGenerator/config.h
 ButtonObj.h
 /home/zack/git-repos/KeyGenerator/ButtonObj.h
+TextObj.h
+/home/zack/git-repos/KeyGenerator/TextObj.h
 

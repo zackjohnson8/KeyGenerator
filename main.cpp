@@ -17,6 +17,7 @@ Date: 03/15/17
 #include <SFML/Audio.hpp>
 #include "config.h"
 #include "ButtonObj.h"
+#include "TextObj.h"
 
 void fileHandlerDebugger( FileHandler* debuggerFile );
 
@@ -28,9 +29,7 @@ int main()
 
     // Create a FileHandler to test the file handler text addition and removal
     FileHandler* debugFile = new FileHandler();
-
     fileHandlerDebugger(debugFile);
-
 
 //========= MAIN LOOP =========================
 
@@ -48,26 +47,57 @@ int main()
     mainWindow->create(sf::VideoMode(mainWindowSize.x, mainWindowSize.y), "My Program", sf::Style::Close);
     mainWindow->setPosition(sf::Vector2i(0,0));
 
+    // Add font for text
+    sf::Font font;
+
+    if(font.loadFromFile("ClearSans-Regular.ttf"))
+    {
+
+        debugFile->addTextToFile("Loaded Text");
+
+    }else
+    {
+
+        debugFile->addTextToFile("ERROR: Font Not Loaded");
+
+    }
+
     // Build mainWindow Display items
 
-    // ADD / REMOVE BUTTONS
-    ButtonObj* displayButton = new ButtonObj();
-    displayButton->setSize(addButtonSize);
-    displayButton->setPosition(buttonBoarderSize, mainWindow->getSize().y - addButtonSize.y - buttonBoarderSize);
-    displayButton->setFillColor(sf::Color::Black);
-    displayButton->setOutlineThickness(buttonBoarderSize);
-    displayButton->setOutlineColor(sf::Color::Blue);
-    mainWindow->addButton(*displayButton);
+    // ADD BUTTONS
+    ButtonObj* addButton = new ButtonObj();
+    addButton->setSize(addButtonSize);
+    addButton->setPosition(buttonBoarderSize, mainWindow->getSize().y - addButtonSize.y - buttonBoarderSize);
+    addButton->setFillColor(sf::Color::Black);
+    addButton->setOutlineThickness(buttonBoarderSize);
+    addButton->setOutlineColor(sf::Color::Blue);
+    mainWindow->addButton(*addButton);
 
-    ButtonObj* musicButton = new ButtonObj();
-    musicButton->setSize(removeButtonSize);
-    musicButton->setPosition(mainWindow->getSize().x - removeButtonSize.x - buttonBoarderSize, mainWindow->getSize().y - removeButtonSize.y - buttonBoarderSize);
-    musicButton->setFillColor(sf::Color::Black);
-    musicButton->setOutlineThickness(buttonBoarderSize);
-    musicButton->setOutlineColor(sf::Color::Blue);
-    mainWindow->addButton(*musicButton);
+    ButtonObj* removeButton = new ButtonObj();
+    removeButton->setSize(removeButtonSize);
+    removeButton->setPosition(mainWindow->getSize().x - removeButtonSize.x - buttonBoarderSize, mainWindow->getSize().y - removeButtonSize.y - buttonBoarderSize);
+    removeButton->setFillColor(sf::Color::Black);
+    removeButton->setOutlineThickness(buttonBoarderSize);
+    removeButton->setOutlineColor(sf::Color::Blue);
+    mainWindow->addButton(*removeButton);
+
+    // ADD TEXTS
+    TextObj* addButtonText = new TextObj();
+    addButtonText->setFont(font);
+    addButtonText->setColor(sf::Color::Red);
+    addButtonText->setString("add");
+    addButtonText->setTextLocation(addButton);
+    mainWindow->addText(*addButtonText);
 
 
+    TextObj* removeButtonText = new TextObj();
+    removeButtonText->setFont(font);
+    removeButtonText->setColor(sf::Color::Red);
+    removeButtonText->setString("remove");
+    removeButtonText->setTextLocation(removeButton);
+    mainWindow->addText(*removeButtonText);
+
+//////////// MAIN PROGRAM START //////////////////////////
 
     while (mainWindow->isOpen())
     {

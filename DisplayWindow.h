@@ -8,7 +8,7 @@
 #include "Sprite.h"
 #include "FileHandler.h"
 #include "ButtonObj.h"
-
+#include "TextObj.h"
 
 class DisplayWindow : public sf::RenderWindow
 {
@@ -17,12 +17,15 @@ public:
 
     void drawObjects();
     void addButton(ButtonObj& newButton);
+    void addText(TextObj& pText);
+
     ButtonObj* getButtonAtMouse(sf::Vector2i&);
 
     bool buttonClicked(sf::Vector2i&);
 
 private:
 
+    std::vector<TextObj> textList;
     std::vector<ButtonObj> buttonList;
 
 };

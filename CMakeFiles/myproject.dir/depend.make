@@ -9,6 +9,7 @@ CMakeFiles/myproject.dir/DisplayWindow.cpp.o: DisplayWindow.cpp
 CMakeFiles/myproject.dir/DisplayWindow.cpp.o: DisplayWindow.h
 CMakeFiles/myproject.dir/DisplayWindow.cpp.o: FileHandler.h
 CMakeFiles/myproject.dir/DisplayWindow.cpp.o: Sprite.h
+CMakeFiles/myproject.dir/DisplayWindow.cpp.o: TextObj.h
 
 CMakeFiles/myproject.dir/FileHandler.cpp.o: FileHandler.cpp
 CMakeFiles/myproject.dir/FileHandler.cpp.o: FileHandler.h
@@ -16,10 +17,15 @@ CMakeFiles/myproject.dir/FileHandler.cpp.o: FileHandler.h
 CMakeFiles/myproject.dir/Sprite.cpp.o: Sprite.cpp
 CMakeFiles/myproject.dir/Sprite.cpp.o: Sprite.h
 
+CMakeFiles/myproject.dir/TextObj.cpp.o: ButtonObj.h
+CMakeFiles/myproject.dir/TextObj.cpp.o: TextObj.cpp
+CMakeFiles/myproject.dir/TextObj.cpp.o: TextObj.h
+
 CMakeFiles/myproject.dir/main.cpp.o: ButtonObj.h
 CMakeFiles/myproject.dir/main.cpp.o: DisplayWindow.h
 CMakeFiles/myproject.dir/main.cpp.o: FileHandler.h
 CMakeFiles/myproject.dir/main.cpp.o: Sprite.h
+CMakeFiles/myproject.dir/main.cpp.o: TextObj.h
 CMakeFiles/myproject.dir/main.cpp.o: config.h
 CMakeFiles/myproject.dir/main.cpp.o: main.cpp
 

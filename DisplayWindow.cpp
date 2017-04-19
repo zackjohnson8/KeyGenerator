@@ -89,13 +89,30 @@ ButtonObj* DisplayWindow::getButtonAtMouse(sf::Vector2i& mousePosition)
 void DisplayWindow::drawObjects()
 {
 
-    for(int x = 0; x < buttonList.size(); x++)
+    int count;
+
+
+    for(count = 0; count < buttonList.size(); count++)
     {
 
-        this->draw(*(buttonList.at(x).getRectHandle()));
+        this->draw(*(buttonList.at(count).getRectHandle()));
 
     }
 
+    for(count = 0; count < textList.size(); count++)
+    {
+
+        this->draw((textList.at(count)));
+
+    }
+
+
+}
+
+void DisplayWindow::addText(TextObj& pText)
+{
+
+    textList.push_back(pText);
 
 }
 

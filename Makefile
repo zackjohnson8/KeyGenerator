@@ -297,6 +297,33 @@ Sprite.cpp.s:
 	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/Sprite.cpp.s
 .PHONY : Sprite.cpp.s
 
+TextObj.o: TextObj.cpp.o
+
+.PHONY : TextObj.o
+
+# target to build an object file
+TextObj.cpp.o:
+	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/TextObj.cpp.o
+.PHONY : TextObj.cpp.o
+
+TextObj.i: TextObj.cpp.i
+
+.PHONY : TextObj.i
+
+# target to preprocess a source file
+TextObj.cpp.i:
+	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/TextObj.cpp.i
+.PHONY : TextObj.cpp.i
+
+TextObj.s: TextObj.cpp.s
+
+.PHONY : TextObj.s
+
+# target to generate assembly for a file
+TextObj.cpp.s:
+	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/TextObj.cpp.s
+.PHONY : TextObj.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -351,6 +378,9 @@ help:
 	@echo "... Sprite.o"
 	@echo "... Sprite.i"
 	@echo "... Sprite.s"
+	@echo "... TextObj.o"
+	@echo "... TextObj.i"
+	@echo "... TextObj.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
