@@ -95,14 +95,21 @@ void DisplayWindow::drawObjects()
     for(count = 0; count < buttonList.size(); count++)
     {
 
-        this->draw((buttonList.at(count)));
+        this->draw(buttonList.at(count));
+
+    }
+
+    for(count = 0; count < taskList.size(); count++)
+    {
+
+        this->draw(taskList.at(count));
 
     }
 
     for(count = 0; count < textList.size(); count++)
     {
 
-        this->draw((textList.at(count)));
+        this->draw(textList.at(count));
 
     }
 

@@ -8,7 +8,7 @@
 enum ButtonFunct
 {
 
-    AUTO_CLICKER
+    ADD_TASK
 
 
 };
@@ -22,7 +22,7 @@ public:
     int getHeight();
 
     void setBtnFunction(const ButtonFunct);
-    void startBtnFunction(const ButtonFunct);
+    void addTask(const ButtonFunct);
 
 private:
 

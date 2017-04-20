@@ -21,10 +21,10 @@ void ButtonObj::setBtnFunction(const ButtonFunct)
 
 }
 
-void ButtonObj::startBtnFunction(const ButtonFunct)
+void ButtonObj::addTask(const ButtonFunct)
 {
 
-    std::cout << "START" << std::endl;
+
 
 }
 

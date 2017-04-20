@@ -127,7 +127,7 @@ int main()
                     std::cout << "CLICKED" << std::endl;
                     // Execute the function in the button that was clicked
                     ButtonObj* myButton = mainWindow->getButtonAtMouse(mousePosition);
-                    myButton->startBtnFunction(AUTO_CLICKER);
+                    myButton->addTask(ADD_TASK);
 
 
                 }

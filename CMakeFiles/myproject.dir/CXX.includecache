@@ -39,6 +39,8 @@ ButtonObj.h
 /home/zack/git-repos/KeyGenerator/ButtonObj.h
 TextObj.h
 /home/zack/git-repos/KeyGenerator/TextObj.h
+TaskObj.h
+/home/zack/git-repos/KeyGenerator/TaskObj.h
 
 /home/zack/git-repos/KeyGenerator/FileHandler.cpp
 FileHandler.h

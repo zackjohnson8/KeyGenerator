@@ -9,6 +9,7 @@
 #include "FileHandler.h"
 #include "ButtonObj.h"
 #include "TextObj.h"
+#include "TaskObj.h"
 
 class DisplayWindow : public sf::RenderWindow
 {
@@ -27,6 +28,7 @@ private:
 
     std::vector<TextObj> textList;
     std::vector<ButtonObj> buttonList;
+    std::vector<TaskObj> taskList;
 
 };
 
