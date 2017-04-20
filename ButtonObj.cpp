@@ -1,12 +1,5 @@
 #include "ButtonObj.h"
 
-sf::RectangleShape* ButtonObj::getRectHandle()
-{
-
-    return this;
-
-}
-
 int ButtonObj::getWidth()
 {
 

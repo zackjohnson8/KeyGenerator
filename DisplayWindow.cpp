@@ -95,7 +95,7 @@ void DisplayWindow::drawObjects()
     for(count = 0; count < buttonList.size(); count++)
     {
 
-        this->draw(*(buttonList.at(count).getRectHandle()));
+        this->draw((buttonList.at(count)));
 
     }
 

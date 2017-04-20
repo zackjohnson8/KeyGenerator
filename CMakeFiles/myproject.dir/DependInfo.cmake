@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/zack/git-repos/KeyGenerator/DisplayWindow.cpp" "/home/zack/git-repos/KeyGenerator/CMakeFiles/myproject.dir/DisplayWindow.cpp.o"
   "/home/zack/git-repos/KeyGenerator/FileHandler.cpp" "/home/zack/git-repos/KeyGenerator/CMakeFiles/myproject.dir/FileHandler.cpp.o"
   "/home/zack/git-repos/KeyGenerator/Sprite.cpp" "/home/zack/git-repos/KeyGenerator/CMakeFiles/myproject.dir/Sprite.cpp.o"
+  "/home/zack/git-repos/KeyGenerator/TaskObj.cpp" "/home/zack/git-repos/KeyGenerator/CMakeFiles/myproject.dir/TaskObj.cpp.o"
   "/home/zack/git-repos/KeyGenerator/TextObj.cpp" "/home/zack/git-repos/KeyGenerator/CMakeFiles/myproject.dir/TextObj.cpp.o"
   "/home/zack/git-repos/KeyGenerator/main.cpp" "/home/zack/git-repos/KeyGenerator/CMakeFiles/myproject.dir/main.cpp.o"
   )

@@ -17,6 +17,9 @@ CMakeFiles/myproject.dir/FileHandler.cpp.o: FileHandler.h
 CMakeFiles/myproject.dir/Sprite.cpp.o: Sprite.cpp
 CMakeFiles/myproject.dir/Sprite.cpp.o: Sprite.h
 
+CMakeFiles/myproject.dir/TaskObj.cpp.o: TaskObj.cpp
+CMakeFiles/myproject.dir/TaskObj.cpp.o: TaskObj.h
+
 CMakeFiles/myproject.dir/TextObj.cpp.o: ButtonObj.h
 CMakeFiles/myproject.dir/TextObj.cpp.o: TextObj.cpp
 CMakeFiles/myproject.dir/TextObj.cpp.o: TextObj.h

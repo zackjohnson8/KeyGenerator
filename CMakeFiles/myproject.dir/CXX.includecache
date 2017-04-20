@@ -64,6 +64,18 @@ Sprite.h
 
 /home/zack/git-repos/KeyGenerator/Sprite.h
 
+/home/zack/git-repos/KeyGenerator/TaskObj.cpp
+TaskObj.h
+/home/zack/git-repos/KeyGenerator/TaskObj.h
+
+/home/zack/git-repos/KeyGenerator/TaskObj.h
+cstdlib
+-
+iostream
+-
+SFML/Graphics.hpp
+-
+
 /home/zack/git-repos/KeyGenerator/TextObj.cpp
 TextObj.h
 /home/zack/git-repos/KeyGenerator/TextObj.h

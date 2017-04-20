@@ -20,10 +20,8 @@ public:
 
     int getWidth();
     int getHeight();
-    sf::RectangleShape* getRectHandle();
 
     void setBtnFunction(const ButtonFunct);
-
     void startBtnFunction(const ButtonFunct);
 
 private:

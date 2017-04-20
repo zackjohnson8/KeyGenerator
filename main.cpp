@@ -5,8 +5,6 @@ Version: 1.0
 Date: 03/15/17
 */
 
-//TODO: Fix the window handle to be held in main and not in the class itself
-
 //READLIST: Global variable appropriate uses.
 #include <iostream>
 #include <cstdlib>
@@ -23,6 +21,11 @@ void fileHandlerDebugger( FileHandler* debuggerFile );
 
 int main()
 {
+
+    //TODO: Add functionality to buttons. Create a task class that handles collecting
+    //      new task data then draw the tasks to screen.
+    //
+    //      Each task will need to inherit the rectangle class,
 
 
 //========== File Handler Debugging ====================//
