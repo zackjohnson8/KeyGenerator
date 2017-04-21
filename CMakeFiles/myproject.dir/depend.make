@@ -3,6 +3,11 @@
 
 CMakeFiles/myproject.dir/ButtonObj.cpp.o: ButtonObj.cpp
 CMakeFiles/myproject.dir/ButtonObj.cpp.o: ButtonObj.h
+CMakeFiles/myproject.dir/ButtonObj.cpp.o: DisplayWindow.h
+CMakeFiles/myproject.dir/ButtonObj.cpp.o: FileHandler.h
+CMakeFiles/myproject.dir/ButtonObj.cpp.o: Sprite.h
+CMakeFiles/myproject.dir/ButtonObj.cpp.o: TaskObj.h
+CMakeFiles/myproject.dir/ButtonObj.cpp.o: TextObj.h
 
 CMakeFiles/myproject.dir/DisplayWindow.cpp.o: ButtonObj.h
 CMakeFiles/myproject.dir/DisplayWindow.cpp.o: DisplayWindow.cpp
@@ -22,6 +27,10 @@ CMakeFiles/myproject.dir/TaskObj.cpp.o: TaskObj.cpp
 CMakeFiles/myproject.dir/TaskObj.cpp.o: TaskObj.h
 
 CMakeFiles/myproject.dir/TextObj.cpp.o: ButtonObj.h
+CMakeFiles/myproject.dir/TextObj.cpp.o: DisplayWindow.h
+CMakeFiles/myproject.dir/TextObj.cpp.o: FileHandler.h
+CMakeFiles/myproject.dir/TextObj.cpp.o: Sprite.h
+CMakeFiles/myproject.dir/TextObj.cpp.o: TaskObj.h
 CMakeFiles/myproject.dir/TextObj.cpp.o: TextObj.cpp
 CMakeFiles/myproject.dir/TextObj.cpp.o: TextObj.h
 

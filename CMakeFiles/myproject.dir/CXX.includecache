@@ -17,6 +17,8 @@ iostream
 -
 SFML/Graphics.hpp
 -
+DisplayWindow.h
+/home/zack/git-repos/KeyGenerator/DisplayWindow.h
 
 /home/zack/git-repos/KeyGenerator/DisplayWindow.cpp
 DisplayWindow.h

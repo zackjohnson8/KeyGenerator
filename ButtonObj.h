@@ -4,6 +4,7 @@
 #include <cstdlib>
 #include <iostream>
 #include <SFML/Graphics.hpp>
+#include "DisplayWindow.h"
 
 enum ButtonFunct
 {
@@ -22,7 +23,7 @@ public:
     int getHeight();
 
     void setBtnFunction(const ButtonFunct);
-    void addTask(const ButtonFunct);
+    void addTask(const ButtonFunct pFunction, DisplayWindow& pHandle);
 
 private:
 
@@ -30,5 +31,7 @@ private:
 
 
 };
+
+
 
 #endif

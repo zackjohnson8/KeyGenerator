@@ -19,6 +19,7 @@ public:
     void drawObjects();
     void addButton(ButtonObj& newButton);
     void addText(TextObj& pText);
+    void addTask(TaskObj& pTask);
 
     ButtonObj* getButtonAtMouse(sf::Vector2i&);
 

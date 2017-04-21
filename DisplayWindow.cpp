@@ -125,7 +125,12 @@ void DisplayWindow::addText(TextObj& pText)
 
 
 
+void DisplayWindow::addTask(TaskObj& pTask)
+{
 
+
+
+}
 
 
 
