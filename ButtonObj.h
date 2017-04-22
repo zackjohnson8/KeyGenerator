@@ -4,12 +4,12 @@
 #include <cstdlib>
 #include <iostream>
 #include <SFML/Graphics.hpp>
-#include "DisplayWindow.h"
 
 enum ButtonFunct
 {
 
-    ADD_TASK
+    ADD_TASK,
+    REMOVE_TASK
 
 
 };
@@ -23,7 +23,9 @@ public:
     int getHeight();
 
     void setBtnFunction(const ButtonFunct);
-    void addTask(const ButtonFunct pFunction, DisplayWindow& pHandle);
+    ButtonFunct getBtnFunction();
+    void createTask();
+
 
 private:
 

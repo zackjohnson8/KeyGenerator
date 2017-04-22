@@ -17,26 +17,21 @@ int ButtonObj::getHeight()
 void ButtonObj::setBtnFunction(const ButtonFunct pFunction)
 {
 
-
+    BtnFunctionality = pFunction;
 
 }
 
-void ButtonObj::addTask(const ButtonFunct pFunction, DisplayWindow& pHandle)
+ButtonFunct ButtonObj::getBtnFunction()
 {
 
-    switch(pFunction)
-    {
-        case ADD_TASK:
-            // create a task for the mainWindow to draw
-            // open a new window to collect all the data
-            break;
+    return BtnFunctionality;
 
-        default:
-            std::cout << "addTask default was called" << std::endl;
-            break;
+}
+
+void ButtonObj::createTask()
+{
 
 
-    }
 
 }
 

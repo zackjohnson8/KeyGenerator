@@ -74,6 +74,7 @@ int main()
     addButton->setFillColor(sf::Color::White);
     addButton->setOutlineThickness(buttonBoarderSize);
     addButton->setOutlineColor(sf::Color::Blue);
+    addButton->setBtnFunction(ADD_TASK);
     mainWindow->addButton(*addButton);
 
     ButtonObj* removeButton = new ButtonObj();
@@ -82,6 +83,7 @@ int main()
     removeButton->setFillColor(sf::Color::White);
     removeButton->setOutlineThickness(buttonBoarderSize);
     removeButton->setOutlineColor(sf::Color::Blue);
+    removeButton->setBtnFunction(REMOVE_TASK);
     mainWindow->addButton(*removeButton);
 
     // ADD TEXTS
@@ -106,6 +108,8 @@ int main()
 
 //////////// MAIN PROGRAM START //////////////////////////
 
+    TaskObj* newTaskHolder = NULL;
+
     while (mainWindow->isOpen())
     {
         sf::Event event;
@@ -124,10 +128,24 @@ int main()
                 if(mainWindow->buttonClicked(mousePosition))
                 {
 
-                    std::cout << "CLICKED" << std::endl;
                     // Execute the function in the button that was clicked
                     ButtonObj* myButton = mainWindow->getButtonAtMouse(mousePosition);
-                    //myButton->addTask(ADD_TASK, mainWindow);
+
+                    switch(myButton->getBtnFunction())
+                    {
+                        // Create a task and send it to the main window
+                        case ADD_TASK:
+                            newTaskHolder = new TaskObj();
+
+                            break;
+
+                        // TODO: Not sure how to complete this
+                        case REMOVE_TASK:
+                            break;
+
+
+
+                    }
 
 
                 }

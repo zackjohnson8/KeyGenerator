@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/myproject.dir/TextObj.cpp.o"
   "CMakeFiles/myproject.dir/FileHandler.cpp.o"
   "CMakeFiles/myproject.dir/TaskObj.cpp.o"
+  "CMakeFiles/myproject.dir/c_string.cpp.o"
   "CMakeFiles/myproject.dir/Sprite.cpp.o"
   "CMakeFiles/myproject.dir/DisplayWindow.cpp.o"
   "myproject.pdb"

@@ -4,11 +4,6 @@
 CMakeFiles/myproject.dir/ButtonObj.cpp.o
  /home/zack/git-repos/KeyGenerator/ButtonObj.cpp
  /home/zack/git-repos/KeyGenerator/ButtonObj.h
- /home/zack/git-repos/KeyGenerator/DisplayWindow.h
- /home/zack/git-repos/KeyGenerator/FileHandler.h
- /home/zack/git-repos/KeyGenerator/Sprite.h
- /home/zack/git-repos/KeyGenerator/TaskObj.h
- /home/zack/git-repos/KeyGenerator/TextObj.h
 CMakeFiles/myproject.dir/DisplayWindow.cpp.o
  /home/zack/git-repos/KeyGenerator/ButtonObj.h
  /home/zack/git-repos/KeyGenerator/DisplayWindow.cpp
@@ -28,12 +23,11 @@ CMakeFiles/myproject.dir/TaskObj.cpp.o
  /home/zack/git-repos/KeyGenerator/TaskObj.h
 CMakeFiles/myproject.dir/TextObj.cpp.o
  /home/zack/git-repos/KeyGenerator/ButtonObj.h
- /home/zack/git-repos/KeyGenerator/DisplayWindow.h
- /home/zack/git-repos/KeyGenerator/FileHandler.h
- /home/zack/git-repos/KeyGenerator/Sprite.h
- /home/zack/git-repos/KeyGenerator/TaskObj.h
  /home/zack/git-repos/KeyGenerator/TextObj.cpp
  /home/zack/git-repos/KeyGenerator/TextObj.h
+CMakeFiles/myproject.dir/c_string.cpp.o
+ /home/zack/git-repos/KeyGenerator/c_string.cpp
+ /home/zack/git-repos/KeyGenerator/c_string.h
 CMakeFiles/myproject.dir/main.cpp.o
  /home/zack/git-repos/KeyGenerator/ButtonObj.h
  /home/zack/git-repos/KeyGenerator/DisplayWindow.h

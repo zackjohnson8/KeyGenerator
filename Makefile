@@ -351,6 +351,33 @@ TextObj.cpp.s:
 	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/TextObj.cpp.s
 .PHONY : TextObj.cpp.s
 
+c_string.o: c_string.cpp.o
+
+.PHONY : c_string.o
+
+# target to build an object file
+c_string.cpp.o:
+	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/c_string.cpp.o
+.PHONY : c_string.cpp.o
+
+c_string.i: c_string.cpp.i
+
+.PHONY : c_string.i
+
+# target to preprocess a source file
+c_string.cpp.i:
+	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/c_string.cpp.i
+.PHONY : c_string.cpp.i
+
+c_string.s: c_string.cpp.s
+
+.PHONY : c_string.s
+
+# target to generate assembly for a file
+c_string.cpp.s:
+	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/c_string.cpp.s
+.PHONY : c_string.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -411,6 +438,9 @@ help:
 	@echo "... TextObj.o"
 	@echo "... TextObj.i"
 	@echo "... TextObj.s"
+	@echo "... c_string.o"
+	@echo "... c_string.i"
+	@echo "... c_string.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
