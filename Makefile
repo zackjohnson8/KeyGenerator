@@ -351,32 +351,32 @@ TextObj.cpp.s:
 	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/TextObj.cpp.s
 .PHONY : TextObj.cpp.s
 
-c_string.o: c_string.cpp.o
+cstring.o: cstring.cpp.o
 
-.PHONY : c_string.o
+.PHONY : cstring.o
 
 # target to build an object file
-c_string.cpp.o:
-	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/c_string.cpp.o
-.PHONY : c_string.cpp.o
+cstring.cpp.o:
+	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/cstring.cpp.o
+.PHONY : cstring.cpp.o
 
-c_string.i: c_string.cpp.i
+cstring.i: cstring.cpp.i
 
-.PHONY : c_string.i
+.PHONY : cstring.i
 
 # target to preprocess a source file
-c_string.cpp.i:
-	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/c_string.cpp.i
-.PHONY : c_string.cpp.i
+cstring.cpp.i:
+	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/cstring.cpp.i
+.PHONY : cstring.cpp.i
 
-c_string.s: c_string.cpp.s
+cstring.s: cstring.cpp.s
 
-.PHONY : c_string.s
+.PHONY : cstring.s
 
 # target to generate assembly for a file
-c_string.cpp.s:
-	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/c_string.cpp.s
-.PHONY : c_string.cpp.s
+cstring.cpp.s:
+	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/cstring.cpp.s
+.PHONY : cstring.cpp.s
 
 main.o: main.cpp.o
 
@@ -438,9 +438,9 @@ help:
 	@echo "... TextObj.o"
 	@echo "... TextObj.i"
 	@echo "... TextObj.s"
-	@echo "... c_string.o"
-	@echo "... c_string.i"
-	@echo "... c_string.s"
+	@echo "... cstring.o"
+	@echo "... cstring.i"
+	@echo "... cstring.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

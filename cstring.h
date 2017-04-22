@@ -3,7 +3,7 @@
 
 using namespace std;
 
-class c_string
+class cstring
 {
 
 public:

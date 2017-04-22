@@ -10,6 +10,7 @@ class TaskObj : public sf::RectangleShape
 
 public:
 
+
 private:
 
 

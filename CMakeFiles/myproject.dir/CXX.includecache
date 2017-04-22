@@ -92,17 +92,17 @@ SFML/Graphics.hpp
 ButtonObj.h
 /home/zack/git-repos/KeyGenerator/ButtonObj.h
 
-/home/zack/git-repos/KeyGenerator/c_string.cpp
-c_string.h
-/home/zack/git-repos/KeyGenerator/c_string.h
+/home/zack/git-repos/KeyGenerator/config.h
 
-/home/zack/git-repos/KeyGenerator/c_string.h
+/home/zack/git-repos/KeyGenerator/cstring.cpp
+cstring.h
+/home/zack/git-repos/KeyGenerator/cstring.h
+
+/home/zack/git-repos/KeyGenerator/cstring.h
 iostream
 -
 cstdlib
 -
-
-/home/zack/git-repos/KeyGenerator/config.h
 
 /home/zack/git-repos/KeyGenerator/main.cpp
 iostream

@@ -25,9 +25,9 @@ CMakeFiles/myproject.dir/TextObj.cpp.o
  /home/zack/git-repos/KeyGenerator/ButtonObj.h
  /home/zack/git-repos/KeyGenerator/TextObj.cpp
  /home/zack/git-repos/KeyGenerator/TextObj.h
-CMakeFiles/myproject.dir/c_string.cpp.o
- /home/zack/git-repos/KeyGenerator/c_string.cpp
- /home/zack/git-repos/KeyGenerator/c_string.h
+CMakeFiles/myproject.dir/cstring.cpp.o
+ /home/zack/git-repos/KeyGenerator/cstring.cpp
+ /home/zack/git-repos/KeyGenerator/cstring.h
 CMakeFiles/myproject.dir/main.cpp.o
  /home/zack/git-repos/KeyGenerator/ButtonObj.h
  /home/zack/git-repos/KeyGenerator/DisplayWindow.h

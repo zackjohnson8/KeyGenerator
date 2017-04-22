@@ -25,8 +25,8 @@ CMakeFiles/myproject.dir/TextObj.cpp.o: ButtonObj.h
 CMakeFiles/myproject.dir/TextObj.cpp.o: TextObj.cpp
 CMakeFiles/myproject.dir/TextObj.cpp.o: TextObj.h
 
-CMakeFiles/myproject.dir/c_string.cpp.o: c_string.cpp
-CMakeFiles/myproject.dir/c_string.cpp.o: c_string.h
+CMakeFiles/myproject.dir/cstring.cpp.o: cstring.cpp
+CMakeFiles/myproject.dir/cstring.cpp.o: cstring.h
 
 CMakeFiles/myproject.dir/main.cpp.o: ButtonObj.h
 CMakeFiles/myproject.dir/main.cpp.o: DisplayWindow.h

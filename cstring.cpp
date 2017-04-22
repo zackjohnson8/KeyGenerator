@@ -1,6 +1,6 @@
-#include "c_string.h"
+#include "cstring.h"
 
-void c_string::strcpy(char* destinationStr, char* originalStr)
+void cstring::strcpy(char* destinationStr, char* originalStr)
 {
 	//copy string2 into the string1
 	int size;
@@ -25,7 +25,7 @@ void c_string::strcpy(char* destinationStr, char* originalStr)
 
 }
 
-bool c_string::strcmp(char* string1, char* string2)
+bool cstring::strcmp(char* string1, char* string2)
 {
 	// string compare the two
 	bool match = true;
@@ -49,7 +49,7 @@ bool c_string::strcmp(char* string1, char* string2)
 	return match;
 }
 
-int c_string::strlen(char* string)
+int cstring::strlen(char* string)
 {
 	// count the length of the string
 	int size = 0;
@@ -69,7 +69,7 @@ int c_string::strlen(char* string)
 
 }
 
-void c_string::strcat(char* string1, char* string2)
+void cstring::strcat(char* string1, char* string2)
 {
 
 	// take two strings (string1, string2) and combine them with a space inbetween
@@ -136,7 +136,7 @@ void c_string::strcat(char* string1, char* string2)
 
 }
 
-void c_string::strclear(char* string)
+void cstring::strclear(char* string)
 {
 
 	int size;
@@ -154,7 +154,7 @@ void c_string::strclear(char* string)
 }
 
 // substr - finds the substring starting at element x and ending at element y
-void c_string::substr(char* string, int x, int y)
+void cstring::substr(char* string, int x, int y)
 {
 
 	int length = y - x;
@@ -179,7 +179,7 @@ void c_string::substr(char* string, int x, int y)
 // strinsert - inserts a new string into destination string starting at position x. Does not
 // overwrite the destination string, e.g., insert string = "big"; destination = "oldest"
 // ; position = 3; result string = "olbigdest"
-void c_string::strinsert(char* string1, char* string2, int x)
+void cstring::strinsert(char* string1, char* string2, int x)
 {
 
 	int string1size = strlen(string1);
@@ -249,7 +249,7 @@ void c_string::strinsert(char* string1, char* string2, int x)
 
 // strreplace - inserts a new string into destination string starting at position x.
 // Overwrites the destination big, oldest, pos 3, olbigt
-void c_string::strreplace(char* string1, char* string2, int x)
+void cstring::strreplace(char* string1, char* string2, int x)
 {
 
 	int size;
@@ -343,7 +343,7 @@ void c_string::strreplace(char* string1, char* string2, int x)
 
 }
 
-void c_string::strfill(char* string, char letter, int x, int y)
+void cstring::strfill(char* string, char letter, int x, int y)
 {
 
 	// fill a part of the string with a letter y amount of times
@@ -367,7 +367,7 @@ void c_string::strfill(char* string, char letter, int x, int y)
 
 }
 
-void c_string::strreverse(char* string)
+void cstring::strreverse(char* string)
 {
 
 	// reverses the string given.

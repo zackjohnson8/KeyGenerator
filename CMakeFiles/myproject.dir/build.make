@@ -177,33 +177,9 @@ CMakeFiles/myproject.dir/TaskObj.cpp.o.provides: CMakeFiles/myproject.dir/TaskOb
 CMakeFiles/myproject.dir/TaskObj.cpp.o.provides.build: CMakeFiles/myproject.dir/TaskObj.cpp.o
 
 
-CMakeFiles/myproject.dir/c_string.cpp.o: CMakeFiles/myproject.dir/flags.make
-CMakeFiles/myproject.dir/c_string.cpp.o: c_string.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zack/git-repos/KeyGenerator/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/myproject.dir/c_string.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/myproject.dir/c_string.cpp.o -c /home/zack/git-repos/KeyGenerator/c_string.cpp
-
-CMakeFiles/myproject.dir/c_string.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/myproject.dir/c_string.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zack/git-repos/KeyGenerator/c_string.cpp > CMakeFiles/myproject.dir/c_string.cpp.i
-
-CMakeFiles/myproject.dir/c_string.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/myproject.dir/c_string.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zack/git-repos/KeyGenerator/c_string.cpp -o CMakeFiles/myproject.dir/c_string.cpp.s
-
-CMakeFiles/myproject.dir/c_string.cpp.o.requires:
-
-.PHONY : CMakeFiles/myproject.dir/c_string.cpp.o.requires
-
-CMakeFiles/myproject.dir/c_string.cpp.o.provides: CMakeFiles/myproject.dir/c_string.cpp.o.requires
-	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/c_string.cpp.o.provides.build
-.PHONY : CMakeFiles/myproject.dir/c_string.cpp.o.provides
-
-CMakeFiles/myproject.dir/c_string.cpp.o.provides.build: CMakeFiles/myproject.dir/c_string.cpp.o
-
-
 CMakeFiles/myproject.dir/Sprite.cpp.o: CMakeFiles/myproject.dir/flags.make
 CMakeFiles/myproject.dir/Sprite.cpp.o: Sprite.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zack/git-repos/KeyGenerator/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/myproject.dir/Sprite.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zack/git-repos/KeyGenerator/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/myproject.dir/Sprite.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/myproject.dir/Sprite.cpp.o -c /home/zack/git-repos/KeyGenerator/Sprite.cpp
 
 CMakeFiles/myproject.dir/Sprite.cpp.i: cmake_force
@@ -223,6 +199,30 @@ CMakeFiles/myproject.dir/Sprite.cpp.o.provides: CMakeFiles/myproject.dir/Sprite.
 .PHONY : CMakeFiles/myproject.dir/Sprite.cpp.o.provides
 
 CMakeFiles/myproject.dir/Sprite.cpp.o.provides.build: CMakeFiles/myproject.dir/Sprite.cpp.o
+
+
+CMakeFiles/myproject.dir/cstring.cpp.o: CMakeFiles/myproject.dir/flags.make
+CMakeFiles/myproject.dir/cstring.cpp.o: cstring.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zack/git-repos/KeyGenerator/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/myproject.dir/cstring.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/myproject.dir/cstring.cpp.o -c /home/zack/git-repos/KeyGenerator/cstring.cpp
+
+CMakeFiles/myproject.dir/cstring.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/myproject.dir/cstring.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zack/git-repos/KeyGenerator/cstring.cpp > CMakeFiles/myproject.dir/cstring.cpp.i
+
+CMakeFiles/myproject.dir/cstring.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/myproject.dir/cstring.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zack/git-repos/KeyGenerator/cstring.cpp -o CMakeFiles/myproject.dir/cstring.cpp.s
+
+CMakeFiles/myproject.dir/cstring.cpp.o.requires:
+
+.PHONY : CMakeFiles/myproject.dir/cstring.cpp.o.requires
+
+CMakeFiles/myproject.dir/cstring.cpp.o.provides: CMakeFiles/myproject.dir/cstring.cpp.o.requires
+	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/cstring.cpp.o.provides.build
+.PHONY : CMakeFiles/myproject.dir/cstring.cpp.o.provides
+
+CMakeFiles/myproject.dir/cstring.cpp.o.provides.build: CMakeFiles/myproject.dir/cstring.cpp.o
 
 
 CMakeFiles/myproject.dir/DisplayWindow.cpp.o: CMakeFiles/myproject.dir/flags.make
@@ -256,8 +256,8 @@ myproject_OBJECTS = \
 "CMakeFiles/myproject.dir/TextObj.cpp.o" \
 "CMakeFiles/myproject.dir/FileHandler.cpp.o" \
 "CMakeFiles/myproject.dir/TaskObj.cpp.o" \
-"CMakeFiles/myproject.dir/c_string.cpp.o" \
 "CMakeFiles/myproject.dir/Sprite.cpp.o" \
+"CMakeFiles/myproject.dir/cstring.cpp.o" \
 "CMakeFiles/myproject.dir/DisplayWindow.cpp.o"
 
 # External object files for target myproject
@@ -268,8 +268,8 @@ myproject: CMakeFiles/myproject.dir/ButtonObj.cpp.o
 myproject: CMakeFiles/myproject.dir/TextObj.cpp.o
 myproject: CMakeFiles/myproject.dir/FileHandler.cpp.o
 myproject: CMakeFiles/myproject.dir/TaskObj.cpp.o
-myproject: CMakeFiles/myproject.dir/c_string.cpp.o
 myproject: CMakeFiles/myproject.dir/Sprite.cpp.o
+myproject: CMakeFiles/myproject.dir/cstring.cpp.o
 myproject: CMakeFiles/myproject.dir/DisplayWindow.cpp.o
 myproject: CMakeFiles/myproject.dir/build.make
 myproject: /usr/lib/x86_64-linux-gnu/libsfml-system.so
@@ -291,8 +291,8 @@ CMakeFiles/myproject.dir/requires: CMakeFiles/myproject.dir/ButtonObj.cpp.o.requ
 CMakeFiles/myproject.dir/requires: CMakeFiles/myproject.dir/TextObj.cpp.o.requires
 CMakeFiles/myproject.dir/requires: CMakeFiles/myproject.dir/FileHandler.cpp.o.requires
 CMakeFiles/myproject.dir/requires: CMakeFiles/myproject.dir/TaskObj.cpp.o.requires
-CMakeFiles/myproject.dir/requires: CMakeFiles/myproject.dir/c_string.cpp.o.requires
 CMakeFiles/myproject.dir/requires: CMakeFiles/myproject.dir/Sprite.cpp.o.requires
+CMakeFiles/myproject.dir/requires: CMakeFiles/myproject.dir/cstring.cpp.o.requires
 CMakeFiles/myproject.dir/requires: CMakeFiles/myproject.dir/DisplayWindow.cpp.o.requires
 
 .PHONY : CMakeFiles/myproject.dir/requires

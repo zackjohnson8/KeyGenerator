@@ -10,7 +10,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/zack/git-repos/KeyGenerator/Sprite.cpp" "/home/zack/git-repos/KeyGenerator/CMakeFiles/myproject.dir/Sprite.cpp.o"
   "/home/zack/git-repos/KeyGenerator/TaskObj.cpp" "/home/zack/git-repos/KeyGenerator/CMakeFiles/myproject.dir/TaskObj.cpp.o"
   "/home/zack/git-repos/KeyGenerator/TextObj.cpp" "/home/zack/git-repos/KeyGenerator/CMakeFiles/myproject.dir/TextObj.cpp.o"
-  "/home/zack/git-repos/KeyGenerator/c_string.cpp" "/home/zack/git-repos/KeyGenerator/CMakeFiles/myproject.dir/c_string.cpp.o"
+  "/home/zack/git-repos/KeyGenerator/cstring.cpp" "/home/zack/git-repos/KeyGenerator/CMakeFiles/myproject.dir/cstring.cpp.o"
   "/home/zack/git-repos/KeyGenerator/main.cpp" "/home/zack/git-repos/KeyGenerator/CMakeFiles/myproject.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
