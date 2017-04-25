@@ -29,10 +29,6 @@ iostream
 -
 SFML/Graphics.hpp
 -
-SFML/Audio.hpp
--
-Sprite.h
-/home/zack/git-repos/KeyGenerator/Sprite.h
 FileHandler.h
 /home/zack/git-repos/KeyGenerator/FileHandler.h
 ButtonObj.h

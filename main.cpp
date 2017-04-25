@@ -48,7 +48,7 @@ int main()
 
     DisplayWindow* mainWindow = new DisplayWindow();
     mainWindow->create(sf::VideoMode(mainWindowSize.x, mainWindowSize.y), "My Program", sf::Style::Close);
-    mainWindow->setPosition(sf::Vector2i(0,0));
+    //mainWindow->setPosition(sf::Vector2i(0,0));
 
     // Add font for text
     sf::Font font;
@@ -106,9 +106,11 @@ int main()
     removeButtonText->setTextLocationCentered(removeButton);
     mainWindow->addText(*removeButtonText);
 
+
 //////////// MAIN PROGRAM START //////////////////////////
 
     TaskObj* newTaskHolder = NULL;
+    DisplayWindow* addEventWindow = NULL;
 
     while (mainWindow->isOpen())
     {
@@ -135,7 +137,36 @@ int main()
                     {
                         // Create a task and send it to the main window
                         case ADD_TASK:
+
                             newTaskHolder = new TaskObj();
+                            // Collect all the data
+                            addEventWindow = new DisplayWindow();
+                            addEventWindow->setFont(font);
+                            addEventWindow->create(sf::VideoMode(300, 300), "Add Task", sf::Style::Close);
+
+                            while(addEventWindow->isOpen())
+                            {
+                                while(addEventWindow->pollEvent(event))
+                                {
+                                    if(event.type == sf::Event::Closed)
+                                    {
+                                        // do nothing with the data since the user exited with the x
+                                        addEventWindow->close();
+
+                                    }
+
+
+
+                                }
+
+                                addEventWindow->clear(sf::Color::White);
+
+                                addEventWindow->drawObjects();
+
+                                addEventWindow->display();
+
+
+                            }
 
                             break;
 
@@ -165,12 +196,6 @@ int main()
     }
 
 
-
-//========= FREE MEMORY =========================================//
-// Make sure to call delete just incase you have things in the destructor that need to be done
-// This can be writing to a log file in the destructor.
-
-    //delete myMusic;
     delete mainWindow;
 
 
@@ -206,16 +231,3 @@ void fileHandlerDebugger( FileHandler* debuggerFile )
     //debuggerFile->deleteBySearch(myAddition);
 
 }
-
-
-// LEFT OVER CODE FOR LATER /////////////////////////////////////////////////
-
-//============= OLD CODE FROM EXPERIMENTING ========== //////
-
-//========== SFML Audio library music playing ===========================//
-
-//    Use the music class
-
-//    sf::Music* myMusic = new sf::Music();
-//    myMusic->openFromFile("mymusic.flac");
-//    myMusic->play();

@@ -1,5 +1,5 @@
-#ifndef DISPLAYWINDOW_H
-#define DISPLAYWINDOW_H
+#ifndef ADDWINDOW_H
+#define ADDWINDOW_H
 
 #include <cstdlib>
 #include <iostream>
@@ -9,27 +9,24 @@
 #include "TextObj.h"
 #include "TaskObj.h"
 
-class DisplayWindow : public sf::RenderWindow
+class AddWindow : public sf::RenderWindow
 {
 
 public:
 
+    AddWindow();
     void drawObjects();
-    void drawAddWindow();
-    void addButton(ButtonObj& newButton);
-    void addText(TextObj& pText);
-    void addTask(TaskObj& pTask);
     void setFont(sf::Font);
-
     ButtonObj* getButtonAtMouse(sf::Vector2i&);
-
     bool buttonClicked(sf::Vector2i&);
 
 private:
 
+    void addButton(ButtonObj& newButton);
+    void addText(TextObj& pText);
+
     std::vector<TextObj> textList;
     std::vector<ButtonObj> buttonList;
-    std::vector<TaskObj> taskList;
 
     sf::Font _font;
 

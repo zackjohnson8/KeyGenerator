@@ -1,14 +1,21 @@
-#include "DisplayWindow.h"
+#include "AddWindow.h"
 
+AddWindow::AddWindow()
+{
 
-void DisplayWindow::addButton(ButtonObj& newButton)
+    // Create the buttons and text for those buttons.
+    // Later you'll need to create locations for people to input data.
+
+}
+
+void AddWindow::addButton(ButtonObj& newButton)
 {
 
     buttonList.push_back(newButton);
 
 }
 
-bool DisplayWindow::buttonClicked(sf::Vector2i& mousePosition)
+bool AddWindow::buttonClicked(sf::Vector2i& mousePosition)
 {
 
     int titleBarSize = 26;
@@ -47,7 +54,7 @@ bool DisplayWindow::buttonClicked(sf::Vector2i& mousePosition)
 
 }
 
-ButtonObj* DisplayWindow::getButtonAtMouse(sf::Vector2i& mousePosition)
+ButtonObj* AddWindow::getButtonAtMouse(sf::Vector2i& mousePosition)
 {
 
     int titleBarSize = 26;
@@ -86,7 +93,7 @@ ButtonObj* DisplayWindow::getButtonAtMouse(sf::Vector2i& mousePosition)
 
 }
 
-void DisplayWindow::drawObjects()
+void AddWindow::drawObjects()
 {
 
     int count;
@@ -99,12 +106,6 @@ void DisplayWindow::drawObjects()
 
     }
 
-    for(count = 0; count < taskList.size(); count++)
-    {
-
-        this->draw(taskList.at(count));
-
-    }
 
     for(count = 0; count < textList.size(); count++)
     {
@@ -116,7 +117,7 @@ void DisplayWindow::drawObjects()
 
 }
 
-void DisplayWindow::addText(TextObj& pText)
+void AddWindow::addText(TextObj& pText)
 {
 
     textList.push_back(pText);
@@ -125,7 +126,7 @@ void DisplayWindow::addText(TextObj& pText)
 
 
 
-void DisplayWindow::addTask(TaskObj& pTask)
+void AddWindow::addTask(TaskObj& pTask)
 {
 
 
@@ -133,34 +134,9 @@ void DisplayWindow::addTask(TaskObj& pTask)
 }
 
 
-void DisplayWindow::setFont(sf::Font pFont)
+void AddWindow::setFont(sf::Font pFont)
 {
 
     _font = pFont;
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
