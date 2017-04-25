@@ -6,6 +6,26 @@
 
 #IncludeRegexTransform: 
 
+/home/zack/git-repos/KeyGenerator/AddWindow.cpp
+AddWindow.h
+/home/zack/git-repos/KeyGenerator/AddWindow.h
+
+/home/zack/git-repos/KeyGenerator/AddWindow.h
+cstdlib
+-
+iostream
+-
+SFML/Graphics.hpp
+-
+FileHandler.h
+/home/zack/git-repos/KeyGenerator/FileHandler.h
+ButtonObj.h
+/home/zack/git-repos/KeyGenerator/ButtonObj.h
+TextObj.h
+/home/zack/git-repos/KeyGenerator/TextObj.h
+TaskObj.h
+/home/zack/git-repos/KeyGenerator/TaskObj.h
+
 /home/zack/git-repos/KeyGenerator/ButtonObj.cpp
 ButtonObj.h
 /home/zack/git-repos/KeyGenerator/ButtonObj.h
@@ -121,4 +141,6 @@ ButtonObj.h
 /home/zack/git-repos/KeyGenerator/ButtonObj.h
 TextObj.h
 /home/zack/git-repos/KeyGenerator/TextObj.h
+AddWindow.h
+/home/zack/git-repos/KeyGenerator/AddWindow.h
 

@@ -8,15 +8,15 @@
 #include "ButtonObj.h"
 #include "TextObj.h"
 #include "TaskObj.h"
+//#include <string>
 
 class AddWindow : public sf::RenderWindow
 {
 
 public:
 
-    AddWindow();
+    AddWindow(sf::Font&);
     void drawObjects();
-    void setFont(sf::Font);
     ButtonObj* getButtonAtMouse(sf::Vector2i&);
     bool buttonClicked(sf::Vector2i&);
 
@@ -27,6 +27,12 @@ private:
 
     std::vector<TextObj> textList;
     std::vector<ButtonObj> buttonList;
+
+    std::string _taskTitle;
+    std::string _taskDescription;
+
+    std::string _taskGetTitle;
+    std::string _taskGetDescription;
 
     sf::Font _font;
 

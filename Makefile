@@ -189,6 +189,33 @@ myproject/fast:
 	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/build
 .PHONY : myproject/fast
 
+AddWindow.o: AddWindow.cpp.o
+
+.PHONY : AddWindow.o
+
+# target to build an object file
+AddWindow.cpp.o:
+	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/AddWindow.cpp.o
+.PHONY : AddWindow.cpp.o
+
+AddWindow.i: AddWindow.cpp.i
+
+.PHONY : AddWindow.i
+
+# target to preprocess a source file
+AddWindow.cpp.i:
+	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/AddWindow.cpp.i
+.PHONY : AddWindow.cpp.i
+
+AddWindow.s: AddWindow.cpp.s
+
+.PHONY : AddWindow.s
+
+# target to generate assembly for a file
+AddWindow.cpp.s:
+	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/AddWindow.cpp.s
+.PHONY : AddWindow.cpp.s
+
 ButtonObj.o: ButtonObj.cpp.o
 
 .PHONY : ButtonObj.o
@@ -420,6 +447,9 @@ help:
 	@echo "... list_install_components"
 	@echo "... myproject"
 	@echo "... install"
+	@echo "... AddWindow.o"
+	@echo "... AddWindow.i"
+	@echo "... AddWindow.s"
 	@echo "... ButtonObj.o"
 	@echo "... ButtonObj.i"
 	@echo "... ButtonObj.s"

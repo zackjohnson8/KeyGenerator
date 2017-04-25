@@ -1,10 +1,41 @@
 #include "AddWindow.h"
 
-AddWindow::AddWindow()
+AddWindow::AddWindow(sf::Font& pFont)
 {
+
+    this->setSize(sf::Vector2u(400,400));
+
+    _font = pFont;
 
     // Create the buttons and text for those buttons.
     // Later you'll need to create locations for people to input data.
+    _taskTitle = "Title";
+    _taskDescription = "Description";
+
+    _taskGetTitle = "";
+    _taskGetDescription = "";
+
+    // place _taskTitle and _taskDescription
+    TextObj* textTitle = new TextObj();
+    TextObj* textDescription = new TextObj();
+
+    textTitle->setFont(pFont);
+    textTitle->setCharacterSize(16);
+    textTitle->setColor(sf::Color::Black);
+    textTitle->setString(_taskTitle);
+    textTitle->setPosition(sf::Vector2f(50, 50));
+
+    textDescription->setFont(pFont);
+    textDescription->setCharacterSize(16);
+    textDescription->setColor(sf::Color::Black);
+    textDescription->setString(_taskDescription);
+    textDescription->setPosition(sf::Vector2f(50, 100));
+
+    addText(*textTitle);
+    addText(*textDescription);
+
+//    this->create(sf::VideoMode(this->getSize().x, this->getSize().y), "Add Task", sf::Style::Close);
+    this->create(sf::VideoMode(400,400), "Add Task", sf::Style::Close);
 
 }
 
@@ -121,22 +152,5 @@ void AddWindow::addText(TextObj& pText)
 {
 
     textList.push_back(pText);
-
-}
-
-
-
-void AddWindow::addTask(TaskObj& pTask)
-{
-
-
-
-}
-
-
-void AddWindow::setFont(sf::Font pFont)
-{
-
-    _font = pFont;
 
 }

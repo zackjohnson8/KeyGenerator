@@ -16,6 +16,7 @@ Date: 03/15/17
 #include "config.h"
 #include "ButtonObj.h"
 #include "TextObj.h"
+#include "AddWindow.h"
 
 void fileHandlerDebugger( FileHandler* debuggerFile );
 
@@ -110,7 +111,7 @@ int main()
 //////////// MAIN PROGRAM START //////////////////////////
 
     TaskObj* newTaskHolder = NULL;
-    DisplayWindow* addEventWindow = NULL;
+    AddWindow* addEventWindow = NULL;
 
     while (mainWindow->isOpen())
     {
@@ -140,9 +141,7 @@ int main()
 
                             newTaskHolder = new TaskObj();
                             // Collect all the data
-                            addEventWindow = new DisplayWindow();
-                            addEventWindow->setFont(font);
-                            addEventWindow->create(sf::VideoMode(300, 300), "Add Task", sf::Style::Close);
+                            addEventWindow = new AddWindow(font);
 
                             while(addEventWindow->isOpen())
                             {
