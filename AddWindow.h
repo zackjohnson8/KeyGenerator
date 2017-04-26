@@ -28,9 +28,6 @@ private:
     std::vector<TextObj> textList;
     std::vector<ButtonObj> buttonList;
 
-    std::string _taskTitle;
-    std::string _taskDescription;
-
     std::string _taskGetTitle;
     std::string _taskGetDescription;
 

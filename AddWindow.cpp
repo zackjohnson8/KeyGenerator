@@ -9,11 +9,32 @@ AddWindow::AddWindow(sf::Font& pFont)
 
     // Create the buttons and text for those buttons.
     // Later you'll need to create locations for people to input data.
-    _taskTitle = "Title";
-    _taskDescription = "Description";
+    std::string _taskTitle = "Title";
+    std::string _taskDescription = "Description";
+    int buttonBoarderSize = 1;
 
     _taskGetTitle = "";
     _taskGetDescription = "";
+
+    // Create the buttons
+    ButtonObj* okButton = new ButtonObj();
+    ButtonObj* cancelButton = new ButtonObj();
+
+    okButton->setSize(sf::Vector2f(200,50));
+    okButton->setPosition(buttonBoarderSize, 400 - 50 - buttonBoarderSize);
+    okButton->setFillColor(sf::Color::Black);
+    okButton->setOutlineThickness(buttonBoarderSize);
+    okButton->setOutlineColor(sf::Color::Blue);
+    // TODO ADD TASK HERE
+    addButton(*okButton);
+
+    cancelButton->setSize(sf::Vector2f(200,50));
+    cancelButton->setPosition(400 - 200 - buttonBoarderSize, 400 - 50 - buttonBoarderSize);
+    cancelButton->setFillColor(sf::Color::Black);
+    cancelButton->setOutlineThickness(buttonBoarderSize);
+    cancelButton->setOutlineColor(sf::Color::Blue);
+    // TODO ADD TASK HERE
+    addButton(*cancelButton);
 
     // place _taskTitle and _taskDescription
     TextObj* textTitle = new TextObj();
@@ -30,6 +51,8 @@ AddWindow::AddWindow(sf::Font& pFont)
     textDescription->setColor(sf::Color::Black);
     textDescription->setString(_taskDescription);
     textDescription->setPosition(sf::Vector2f(50, 100));
+
+
 
     addText(*textTitle);
     addText(*textDescription);
