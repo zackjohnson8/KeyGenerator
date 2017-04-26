@@ -3,7 +3,6 @@
 AddWindow::AddWindow(sf::Font& pFont)
 {
 
-    this->setSize(sf::Vector2u(400,400));
 
     _font = pFont;
 
@@ -11,7 +10,9 @@ AddWindow::AddWindow(sf::Font& pFont)
     // Later you'll need to create locations for people to input data.
     std::string _taskTitle = "Title";
     std::string _taskDescription = "Description";
-    int buttonBoarderSize = 1;
+    int buttonBoarderSize = 2;
+    int bottomBuffer = 15;
+    int sideBuffer = 75;
 
     _taskGetTitle = "";
     _taskGetDescription = "";
@@ -20,19 +21,19 @@ AddWindow::AddWindow(sf::Font& pFont)
     ButtonObj* okButton = new ButtonObj();
     ButtonObj* cancelButton = new ButtonObj();
 
-    okButton->setSize(sf::Vector2f(200,50));
-    okButton->setPosition(buttonBoarderSize, 400 - 50 - buttonBoarderSize);
-    okButton->setFillColor(sf::Color::Black);
+    okButton->setSize(sf::Vector2f(400/4,50));
+    okButton->setPosition(buttonBoarderSize + 75 , 400 - 50 - bottomBuffer );
+    okButton->setFillColor(sf::Color::White);
     okButton->setOutlineThickness(buttonBoarderSize);
-    okButton->setOutlineColor(sf::Color::Blue);
+    okButton->setOutlineColor(sf::Color(0,157,247,255));
     // TODO ADD TASK HERE
     addButton(*okButton);
 
-    cancelButton->setSize(sf::Vector2f(200,50));
-    cancelButton->setPosition(400 - 200 - buttonBoarderSize, 400 - 50 - buttonBoarderSize);
-    cancelButton->setFillColor(sf::Color::Black);
+    cancelButton->setSize(sf::Vector2f(400/4,50));
+    cancelButton->setPosition(400 - 200 - buttonBoarderSize + 25 , 400 - 50 - bottomBuffer);
+    cancelButton->setFillColor(sf::Color::White);
     cancelButton->setOutlineThickness(buttonBoarderSize);
-    cancelButton->setOutlineColor(sf::Color::Blue);
+    cancelButton->setOutlineColor(sf::Color(0,157,247,255));
     // TODO ADD TASK HERE
     addButton(*cancelButton);
 

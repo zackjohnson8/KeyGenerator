@@ -39,9 +39,11 @@ int main()
 
     // Window Parameters
     sf::Vector2f mainWindowSize = sf::Vector2f(500, 500);
-    sf::Vector2f addButtonSize = sf::Vector2f(mainWindowSize.x/2, 50);
-    sf::Vector2f removeButtonSize = sf::Vector2f(mainWindowSize.x/2, 50);
-    int buttonBoarderSize = 1;
+    sf::Vector2f addButtonSize = sf::Vector2f(mainWindowSize.x/4, 50);
+    sf::Vector2f removeButtonSize = sf::Vector2f(mainWindowSize.x/4, 50);
+    int buttonBoarderSize = 2;
+    int bottomBuffer = 15;
+    int sideBuffer = 100;
 
     sf::Vector2i mousePosition;
     std::string holdString;
@@ -71,19 +73,19 @@ int main()
     // ADD BUTTONS
     ButtonObj* addButton = new ButtonObj();
     addButton->setSize(addButtonSize);
-    addButton->setPosition(buttonBoarderSize, mainWindow->getSize().y - addButtonSize.y - buttonBoarderSize);
+    addButton->setPosition(buttonBoarderSize + sideBuffer, mainWindow->getSize().y - addButtonSize.y - bottomBuffer);
     addButton->setFillColor(sf::Color::White);
     addButton->setOutlineThickness(buttonBoarderSize);
-    addButton->setOutlineColor(sf::Color::Blue);
+    addButton->setOutlineColor(sf::Color(0,157,247,255));
     addButton->setBtnFunction(ADD_TASK);
     mainWindow->addButton(*addButton);
 
     ButtonObj* removeButton = new ButtonObj();
     removeButton->setSize(removeButtonSize);
-    removeButton->setPosition(mainWindow->getSize().x - removeButtonSize.x - buttonBoarderSize, mainWindow->getSize().y - removeButtonSize.y - buttonBoarderSize);
+    removeButton->setPosition(mainWindow->getSize().x - removeButtonSize.x - buttonBoarderSize - sideBuffer, mainWindow->getSize().y - removeButtonSize.y - bottomBuffer);
     removeButton->setFillColor(sf::Color::White);
     removeButton->setOutlineThickness(buttonBoarderSize);
-    removeButton->setOutlineColor(sf::Color::Blue);
+    removeButton->setOutlineColor(sf::Color(0,157,247,255));
     removeButton->setBtnFunction(REMOVE_TASK);
     mainWindow->addButton(*removeButton);
 
@@ -159,9 +161,7 @@ int main()
                                 }
 
                                 addEventWindow->clear(sf::Color::White);
-
                                 addEventWindow->drawObjects();
-
                                 addEventWindow->display();
 
 
