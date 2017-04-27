@@ -8,8 +8,8 @@ AddWindow::AddWindow(sf::Font& pFont)
 
     // Create the buttons and text for those buttons.
     // Later you'll need to create locations for people to input data.
-    std::string _taskTitle = "Title";
-    std::string _taskDescription = "Description";
+    std::string _taskTitle = "Title:";
+    std::string _taskDescription = "Description:";
     int buttonBoarderSize = 2;
     int bottomBuffer = 15;
     int sideBuffer = 75;
@@ -36,6 +36,9 @@ AddWindow::AddWindow(sf::Font& pFont)
     cancelButton->setOutlineColor(sf::Color(0,157,247,255));
     // TODO ADD TASK HERE
     addButton(*cancelButton);
+
+    // Create a couple text boxes to receive information from user.
+
 
     // place _taskTitle and _taskDescription
     TextObj* textTitle = new TextObj();

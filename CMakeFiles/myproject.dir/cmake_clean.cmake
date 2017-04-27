@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/myproject.dir/main.cpp.o"
+  "CMakeFiles/myproject.dir/TextBoxObj.cpp.o"
   "CMakeFiles/myproject.dir/ButtonObj.cpp.o"
   "CMakeFiles/myproject.dir/TextObj.cpp.o"
   "CMakeFiles/myproject.dir/FileHandler.cpp.o"

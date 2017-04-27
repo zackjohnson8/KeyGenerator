@@ -351,6 +351,33 @@ TaskObj.cpp.s:
 	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/TaskObj.cpp.s
 .PHONY : TaskObj.cpp.s
 
+TextBoxObj.o: TextBoxObj.cpp.o
+
+.PHONY : TextBoxObj.o
+
+# target to build an object file
+TextBoxObj.cpp.o:
+	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/TextBoxObj.cpp.o
+.PHONY : TextBoxObj.cpp.o
+
+TextBoxObj.i: TextBoxObj.cpp.i
+
+.PHONY : TextBoxObj.i
+
+# target to preprocess a source file
+TextBoxObj.cpp.i:
+	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/TextBoxObj.cpp.i
+.PHONY : TextBoxObj.cpp.i
+
+TextBoxObj.s: TextBoxObj.cpp.s
+
+.PHONY : TextBoxObj.s
+
+# target to generate assembly for a file
+TextBoxObj.cpp.s:
+	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/TextBoxObj.cpp.s
+.PHONY : TextBoxObj.cpp.s
+
 TextObj.o: TextObj.cpp.o
 
 .PHONY : TextObj.o
@@ -465,6 +492,9 @@ help:
 	@echo "... TaskObj.o"
 	@echo "... TaskObj.i"
 	@echo "... TaskObj.s"
+	@echo "... TextBoxObj.o"
+	@echo "... TextBoxObj.i"
+	@echo "... TextBoxObj.s"
 	@echo "... TextObj.o"
 	@echo "... TextObj.i"
 	@echo "... TextObj.s"

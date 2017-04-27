@@ -94,6 +94,8 @@ iostream
 SFML/Graphics.hpp
 -
 
+/home/zack/git-repos/KeyGenerator/TextBoxObj.cpp
+
 /home/zack/git-repos/KeyGenerator/TextObj.cpp
 TextObj.h
 /home/zack/git-repos/KeyGenerator/TextObj.h
