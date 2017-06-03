@@ -18,8 +18,14 @@ Date: 03/15/17
 #include "TextObj.h"
 #include "AddWindow.h"
 
-void fileHandlerDebugger( FileHandler* debuggerFile );
+//Global variables
+sf::Font font;
 
+// Function Declaration
+void fileHandlerDebugger( FileHandler* debuggerFile );
+TaskObj& addTask();
+
+// MAIN //////////////////
 int main()
 {
 
@@ -54,7 +60,6 @@ int main()
     //mainWindow->setPosition(sf::Vector2i(0,0));
 
     // Add font for text
-    sf::Font font;
 
     if(font.loadFromFile("ClearSans-Regular.ttf"))
     {
@@ -112,9 +117,6 @@ int main()
 
 //////////// MAIN PROGRAM START //////////////////////////
 
-    TaskObj* newTaskHolder = NULL;
-    AddWindow* addEventWindow = NULL;
-
     while (mainWindow->isOpen())
     {
         sf::Event event;
@@ -141,31 +143,7 @@ int main()
                         // Create a task and send it to the main window
                         case ADD_TASK:
 
-                            newTaskHolder = new TaskObj();
-                            // Collect all the data
-                            addEventWindow = new AddWindow(font);
-
-                            while(addEventWindow->isOpen())
-                            {
-                                while(addEventWindow->pollEvent(event))
-                                {
-                                    if(event.type == sf::Event::Closed)
-                                    {
-                                        // do nothing with the data since the user exited with the x
-                                        addEventWindow->close();
-
-                                    }
-
-
-
-                                }
-
-                                addEventWindow->clear(sf::Color::White);
-                                addEventWindow->drawObjects();
-                                addEventWindow->display();
-
-
-                            }
+                            mainWindow->addTask(addTask());
 
                             break;
 
@@ -228,5 +206,46 @@ void fileHandlerDebugger( FileHandler* debuggerFile )
     testString = debuggerFile->peakTop();
 
     //debuggerFile->deleteBySearch(myAddition);
+
+}
+
+TaskObj& addTask()
+{
+
+    TaskObj* newTaskHolder = NULL;
+    AddWindow* addEventWindow = NULL;
+    sf::Event event;
+
+    newTaskHolder = new TaskObj();
+
+    // Collect all the data
+    addEventWindow = new AddWindow(font);
+
+    while(addEventWindow->isOpen())
+    {
+        while(addEventWindow->pollEvent(event))
+        {
+            if(event.type == sf::Event::Closed)
+            {
+                // do nothing with the data since the user exited with the x
+                addEventWindow->close();
+
+            }
+
+
+
+        }
+
+        addEventWindow->clear(sf::Color::White);
+        addEventWindow->drawObjects();
+        addEventWindow->display();
+
+
+    }
+
+    newTaskHolder->setTitle();
+    newTaskHolder->setDescription();
+
+    return *newTaskHolder;
 
 }
