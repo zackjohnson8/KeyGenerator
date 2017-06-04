@@ -89,6 +89,7 @@ ButtonObj* DisplayWindow::getButtonAtMouse(sf::Vector2i& mousePosition)
 void DisplayWindow::drawObjects()
 {
 
+    int positionYTask = 2;
     int count;
 
 
@@ -99,10 +100,14 @@ void DisplayWindow::drawObjects()
 
     }
 
-    for(count = 0; count < taskList.size(); count++)
+    count = 0;
+    while(count < taskList.size() && count < 4)
     {
 
+        taskList.at(count).setPosition(sf::Vector2f(2, positionYTask));
         this->draw(taskList.at(count));
+        positionYTask += taskList.at(count).getSize().y;
+        count++;
 
     }
 
@@ -128,7 +133,7 @@ void DisplayWindow::addText(TextObj& pText)
 void DisplayWindow::addTask(TaskObj& pTask)
 {
 
-
+    taskList.push_back(pTask);
 
 }
 

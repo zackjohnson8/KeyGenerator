@@ -243,8 +243,17 @@ TaskObj& addTask()
 
     }
 
-    newTaskHolder->setTitle();
-    newTaskHolder->setDescription();
+    newTaskHolder->setSize(sf::Vector2f(500 - 4, 100));
+    newTaskHolder->setPosition(2, 2);
+    newTaskHolder->setFillColor(sf::Color::White);
+    newTaskHolder->setOutlineThickness(2);
+    newTaskHolder->setOutlineColor(sf::Color(0,157,247,255));
+
+    std::string defaultTitle = "Default Title";
+    std::string defaultDescription = "By giving this task a description I can determine specific information.";
+
+    newTaskHolder->setTitle(defaultTitle);
+    newTaskHolder->setDescription(defaultDescription);
 
     return *newTaskHolder;
 
