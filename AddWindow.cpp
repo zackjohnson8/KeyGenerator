@@ -26,7 +26,7 @@ AddWindow::AddWindow(sf::Font& pFont)
     okButton->setFillColor(sf::Color::White);
     okButton->setOutlineThickness(buttonBoarderSize);
     okButton->setOutlineColor(sf::Color(0,157,247,255));
-    // TODO ADD TASK HERE
+    okButton->setTask(ADD_TASK);
     addButton(*okButton);
 
     cancelButton->setSize(sf::Vector2f(400/4,50));
@@ -34,7 +34,7 @@ AddWindow::AddWindow(sf::Font& pFont)
     cancelButton->setFillColor(sf::Color::White);
     cancelButton->setOutlineThickness(buttonBoarderSize);
     cancelButton->setOutlineColor(sf::Color(0,157,247,255));
-    // TODO ADD TASK HERE
+    cancelButton->setTask(CANCEL_TASK);
     addButton(*cancelButton);
 
     // Create a couple text boxes to receive information from user.

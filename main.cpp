@@ -23,7 +23,7 @@ sf::Font font;
 
 // Function Declaration
 void fileHandlerDebugger( FileHandler* debuggerFile );
-TaskObj& addTask();
+TaskObj* addTask();
 
 // MAIN //////////////////
 int main()
@@ -54,6 +54,7 @@ int main()
     sf::Vector2i mousePosition;
     std::string holdString;
     int holdValue;
+    TaskObj* holdTask = NULL;
 
     DisplayWindow* mainWindow = new DisplayWindow();
     mainWindow->create(sf::VideoMode(mainWindowSize.x, mainWindowSize.y), "My Program", sf::Style::Close);
@@ -82,7 +83,7 @@ int main()
     addButton->setFillColor(sf::Color::White);
     addButton->setOutlineThickness(buttonBoarderSize);
     addButton->setOutlineColor(sf::Color(0,157,247,255));
-    addButton->setBtnFunction(ADD_TASK);
+    addButton->setTask(ADD_TASK);
     mainWindow->addButton(*addButton);
 
     ButtonObj* removeButton = new ButtonObj();
@@ -91,7 +92,7 @@ int main()
     removeButton->setFillColor(sf::Color::White);
     removeButton->setOutlineThickness(buttonBoarderSize);
     removeButton->setOutlineColor(sf::Color(0,157,247,255));
-    removeButton->setBtnFunction(REMOVE_TASK);
+    removeButton->setTask(REMOVE_TASK);
     mainWindow->addButton(*removeButton);
 
     // ADD TEXTS
@@ -143,7 +144,13 @@ int main()
                         // Create a task and send it to the main window
                         case ADD_TASK:
 
-                            mainWindow->addTask(addTask());
+                            holdTask = addTask();
+
+                            // Making sure that addTask window wasn't just closed out of or cancel button clicked
+                            if(holdTask != NULL)
+                            {
+                                mainWindow->addTask(*holdTask);
+                            }
 
                             break;
 
@@ -209,12 +216,16 @@ void fileHandlerDebugger( FileHandler* debuggerFile )
 
 }
 
-TaskObj& addTask()
+TaskObj* addTask()
 {
 
     TaskObj* newTaskHolder = NULL;
     AddWindow* addEventWindow = NULL;
+    sf::Vector2i mousePosition;
     sf::Event event;
+
+    std::string defaultTitle = "Default Title";
+    std::string defaultDescription = "By giving this task a description I can determine specific information.";
 
     newTaskHolder = new TaskObj();
 
@@ -229,10 +240,59 @@ TaskObj& addTask()
             {
                 // do nothing with the data since the user exited with the x
                 addEventWindow->close();
+                return NULL;
 
             }
 
 
+            if (event.type == sf::Event::MouseButtonPressed)
+            {
+
+                mousePosition = sf::Mouse::getPosition();
+
+                if(addEventWindow->buttonClicked(mousePosition))
+                {
+
+                    // Execute the function in the button that was clicked
+                    ButtonObj* myButton = addEventWindow->getButtonAtMouse(mousePosition);
+
+                    switch(myButton->getBtnFunction())
+                    {
+                        // Create a task and send it to the main window
+                        case ADD_TASK:
+
+                            newTaskHolder->setSize(sf::Vector2f(500 - 4, 100));
+                            newTaskHolder->setPosition(2, 2);
+                            newTaskHolder->setFillColor(sf::Color::White);
+                            newTaskHolder->setOutlineThickness(2);
+                            newTaskHolder->setOutlineColor(sf::Color(0,157,247,255));
+
+
+
+                            newTaskHolder->setTitle(defaultTitle);
+                            newTaskHolder->setDescription(defaultDescription);
+
+                            addEventWindow->close();
+                            return newTaskHolder;
+
+                            break;
+
+                        // TODO: Not sure how to complete this
+                        case CANCEL_TASK:
+
+                            addEventWindow->close();
+                            return NULL;
+                            break;
+
+
+
+                    }
+
+
+                }
+
+
+            }
 
         }
 
@@ -243,18 +303,6 @@ TaskObj& addTask()
 
     }
 
-    newTaskHolder->setSize(sf::Vector2f(500 - 4, 100));
-    newTaskHolder->setPosition(2, 2);
-    newTaskHolder->setFillColor(sf::Color::White);
-    newTaskHolder->setOutlineThickness(2);
-    newTaskHolder->setOutlineColor(sf::Color(0,157,247,255));
-
-    std::string defaultTitle = "Default Title";
-    std::string defaultDescription = "By giving this task a description I can determine specific information.";
-
-    newTaskHolder->setTitle(defaultTitle);
-    newTaskHolder->setDescription(defaultDescription);
-
-    return *newTaskHolder;
+    return NULL;
 
 }

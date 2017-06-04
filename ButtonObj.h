@@ -9,8 +9,8 @@ enum ButtonFunct
 {
 
     ADD_TASK,
-    REMOVE_TASK
-
+    REMOVE_TASK,
+    CANCEL_TASK
 
 };
 
@@ -22,7 +22,7 @@ public:
     int getWidth();
     int getHeight();
 
-    void setBtnFunction(const ButtonFunct);
+    void setTask(const ButtonFunct);
     ButtonFunct getBtnFunction();
     void createTask();
 

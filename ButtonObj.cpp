@@ -14,7 +14,7 @@ int ButtonObj::getHeight()
 
 }
 
-void ButtonObj::setBtnFunction(const ButtonFunct pFunction)
+void ButtonObj::setTask(const ButtonFunct pFunction)
 {
 
     BtnFunctionality = pFunction;
