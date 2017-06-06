@@ -17,19 +17,29 @@ int ButtonObj::getHeight()
 void ButtonObj::setTask(const ButtonFunct pFunction)
 {
 
-    BtnFunctionality = pFunction;
+    _btnFunctionality = pFunction;
 
 }
 
 ButtonFunct ButtonObj::getBtnFunction()
 {
 
-    return BtnFunctionality;
+    return _btnFunctionality;
 
 }
 
 void ButtonObj::createTask()
 {
+
+
+
+}
+
+void ButtonObj::setButtonText(std::string& pText)
+{
+
+
+
 
 
 

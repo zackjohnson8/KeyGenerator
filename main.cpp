@@ -13,6 +13,7 @@ Date: 03/15/17
 #include "DisplayWindow.h"
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
+#include <SFML/Network.hpp>
 #include "config.h"
 #include "ButtonObj.h"
 #include "TextObj.h"
@@ -29,10 +30,11 @@ TaskObj* addTask();
 int main()
 {
 
-    //TODO: Add functionality to buttons. Create a task class that handles collecting
-    //      new task data then draw the tasks to screen.
-    //
-    //      Each task will need to inherit the rectangle class,
+
+// NETWORK //////////////////////////
+//    sf::IpAddress myAddress = sf::IPAddress::getLocalAddress();
+//
+//    sf::Socket *Listener = new sf::Socket(sf::Socket::Tcp);
 
 
 //========== File Handler Debugging ====================//
@@ -58,10 +60,8 @@ int main()
 
     DisplayWindow* mainWindow = new DisplayWindow();
     mainWindow->create(sf::VideoMode(mainWindowSize.x, mainWindowSize.y), "My Program", sf::Style::Close);
-    //mainWindow->setPosition(sf::Vector2i(0,0));
 
     // Add font for text
-
     if(font.loadFromFile("ClearSans-Regular.ttf"))
     {
 
@@ -74,7 +74,7 @@ int main()
 
     }
 
-    // Build mainWindow Display items
+    // Build mainWindow Display items ///////////////////////////////////////////////////
 
     // ADD BUTTONS
     ButtonObj* addButton = new ButtonObj();
@@ -120,6 +120,8 @@ int main()
 
     while (mainWindow->isOpen())
     {
+
+        // Events for window
         sf::Event event;
         while (mainWindow->pollEvent(event))
         {
@@ -306,3 +308,37 @@ TaskObj* addTask()
     return NULL;
 
 }
+
+
+/* SOCKET NOTES */
+/*
+    TCP(reliable) UDP(lost but fast)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/

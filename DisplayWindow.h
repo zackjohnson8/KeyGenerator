@@ -27,8 +27,8 @@ public:
 
 private:
 
-    std::vector<TextObj> textList;
-    std::vector<ButtonObj> buttonList;
+    std::vector<TextObj> _textList;
+    std::vector<ButtonObj> _buttonList;
     std::vector<TaskObj> taskList;
 
     sf::Font _font;

@@ -25,8 +25,8 @@ private:
     void addButton(ButtonObj& newButton);
     void addText(TextObj& pText);
 
-    std::vector<TextObj> textList;
-    std::vector<ButtonObj> buttonList;
+    std::vector<TextObj> _textList;
+    std::vector<ButtonObj> _buttonList;
 
     std::string _taskGetTitle;
     std::string _taskGetDescription;

@@ -22,15 +22,17 @@ public:
     int getWidth();
     int getHeight();
 
+    void setButtonText(std::string&);
     void setTask(const ButtonFunct);
+
     ButtonFunct getBtnFunction();
     void createTask();
 
 
 private:
 
-    ButtonFunct BtnFunctionality;
-
+    ButtonFunct _btnFunctionality;
+    std::string _buttonText;
 
 };
 

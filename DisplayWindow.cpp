@@ -4,7 +4,7 @@
 void DisplayWindow::addButton(ButtonObj& newButton)
 {
 
-    buttonList.push_back(newButton);
+    _buttonList.push_back(newButton);
 
 }
 
@@ -19,14 +19,14 @@ bool DisplayWindow::buttonClicked(sf::Vector2i& mousePosition)
     int buttonWidth = 0;
     int buttonHeight = 0;
 
-    for(int x = 0; x < buttonList.size(); x++)
+    for(int x = 0; x < _buttonList.size(); x++)
     {
 
         // Check the current button on top then push top to button of vector
-        buttonXPos = buttonList.at(x).getPosition().x;
-        buttonYPos = buttonList.at(x).getPosition().y;
-        buttonWidth = buttonList.at(x).getSize().x;
-        buttonHeight = buttonList.at(x).getSize().y;
+        buttonXPos = _buttonList.at(x).getPosition().x;
+        buttonYPos = _buttonList.at(x).getPosition().y;
+        buttonWidth = _buttonList.at(x).getSize().x;
+        buttonHeight = _buttonList.at(x).getSize().y;
         windowPosition = this->getPosition();
 
         // Use said data to determine if mousePosition is over this spot
@@ -58,14 +58,14 @@ ButtonObj* DisplayWindow::getButtonAtMouse(sf::Vector2i& mousePosition)
     int buttonWidth = 0;
     int buttonHeight = 0;
 
-    for(int x = 0; x < buttonList.size(); x++)
+    for(int x = 0; x < _buttonList.size(); x++)
     {
 
         // Check the current button on top then push top to button of vector
-        buttonXPos = buttonList.at(x).getPosition().x;
-        buttonYPos = buttonList.at(x).getPosition().y;
-        buttonWidth = buttonList.at(x).getSize().x;
-        buttonHeight = buttonList.at(x).getSize().y;
+        buttonXPos = _buttonList.at(x).getPosition().x;
+        buttonYPos = _buttonList.at(x).getPosition().y;
+        buttonWidth = _buttonList.at(x).getSize().x;
+        buttonHeight = _buttonList.at(x).getSize().y;
         windowPosition = this->getPosition();
 
         // Use said data to determine if mousePosition is over this spot
@@ -75,7 +75,7 @@ ButtonObj* DisplayWindow::getButtonAtMouse(sf::Vector2i& mousePosition)
           )
         {
 
-            return &(buttonList.at(x));
+            return &(_buttonList.at(x));
 
         }
 
@@ -93,10 +93,10 @@ void DisplayWindow::drawObjects()
     int count;
 
 
-    for(count = 0; count < buttonList.size(); count++)
+    for(count = 0; count < _buttonList.size(); count++)
     {
 
-        this->draw(buttonList.at(count));
+        this->draw(_buttonList.at(count));
 
     }
 
@@ -111,10 +111,10 @@ void DisplayWindow::drawObjects()
 
     }
 
-    for(count = 0; count < textList.size(); count++)
+    for(count = 0; count < _textList.size(); count++)
     {
 
-        this->draw(textList.at(count));
+        this->draw(_textList.at(count));
 
     }
 
@@ -124,7 +124,7 @@ void DisplayWindow::drawObjects()
 void DisplayWindow::addText(TextObj& pText)
 {
 
-    textList.push_back(pText);
+    _textList.push_back(pText);
 
 }
 

@@ -94,6 +94,18 @@ iostream
 SFML/Graphics.hpp
 -
 
+/home/zack/git-repos/KeyGenerator/TcpSocket.cpp
+TcpSocket.h
+/home/zack/git-repos/KeyGenerator/TcpSocket.h
+
+/home/zack/git-repos/KeyGenerator/TcpSocket.h
+cstdlib
+-
+iostream
+-
+SFML/Network.hpp
+-
+
 /home/zack/git-repos/KeyGenerator/TextBoxObj.cpp
 
 /home/zack/git-repos/KeyGenerator/TextObj.cpp
@@ -136,6 +148,8 @@ DisplayWindow.h
 SFML/Graphics.hpp
 -
 SFML/Audio.hpp
+-
+SFML/Network.hpp
 -
 config.h
 /home/zack/git-repos/KeyGenerator/config.h

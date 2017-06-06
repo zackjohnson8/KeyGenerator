@@ -27,6 +27,9 @@ CMakeFiles/myproject.dir/Sprite.cpp.o: Sprite.h
 CMakeFiles/myproject.dir/TaskObj.cpp.o: TaskObj.cpp
 CMakeFiles/myproject.dir/TaskObj.cpp.o: TaskObj.h
 
+CMakeFiles/myproject.dir/TcpSocket.cpp.o: TcpSocket.cpp
+CMakeFiles/myproject.dir/TcpSocket.cpp.o: TcpSocket.h
+
 CMakeFiles/myproject.dir/TextBoxObj.cpp.o: TextBoxObj.cpp
 
 CMakeFiles/myproject.dir/TextObj.cpp.o: ButtonObj.h

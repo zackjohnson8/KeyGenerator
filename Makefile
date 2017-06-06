@@ -351,6 +351,33 @@ TaskObj.cpp.s:
 	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/TaskObj.cpp.s
 .PHONY : TaskObj.cpp.s
 
+TcpSocket.o: TcpSocket.cpp.o
+
+.PHONY : TcpSocket.o
+
+# target to build an object file
+TcpSocket.cpp.o:
+	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/TcpSocket.cpp.o
+.PHONY : TcpSocket.cpp.o
+
+TcpSocket.i: TcpSocket.cpp.i
+
+.PHONY : TcpSocket.i
+
+# target to preprocess a source file
+TcpSocket.cpp.i:
+	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/TcpSocket.cpp.i
+.PHONY : TcpSocket.cpp.i
+
+TcpSocket.s: TcpSocket.cpp.s
+
+.PHONY : TcpSocket.s
+
+# target to generate assembly for a file
+TcpSocket.cpp.s:
+	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/TcpSocket.cpp.s
+.PHONY : TcpSocket.cpp.s
+
 TextBoxObj.o: TextBoxObj.cpp.o
 
 .PHONY : TextBoxObj.o
@@ -492,6 +519,9 @@ help:
 	@echo "... TaskObj.o"
 	@echo "... TaskObj.i"
 	@echo "... TaskObj.s"
+	@echo "... TcpSocket.o"
+	@echo "... TcpSocket.i"
+	@echo "... TcpSocket.s"
 	@echo "... TextBoxObj.o"
 	@echo "... TextBoxObj.i"
 	@echo "... TextBoxObj.s"
