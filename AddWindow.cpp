@@ -57,9 +57,6 @@ AddWindow::AddWindow(sf::Font& pFont)
     textDescription->setPosition(sf::Vector2f(50, 100));
 
 
-    // A text to each of the buttons
-
-
     addText(*textTitle);
     addText(*textDescription);
 

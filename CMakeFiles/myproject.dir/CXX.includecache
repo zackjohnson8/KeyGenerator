@@ -76,12 +76,6 @@ ctime
 string
 -
 
-/home/zack/git-repos/KeyGenerator/Sprite.cpp
-Sprite.h
-/home/zack/git-repos/KeyGenerator/Sprite.h
-
-/home/zack/git-repos/KeyGenerator/Sprite.h
-
 /home/zack/git-repos/KeyGenerator/TaskObj.cpp
 TaskObj.h
 /home/zack/git-repos/KeyGenerator/TaskObj.h
@@ -92,18 +86,6 @@ cstdlib
 iostream
 -
 SFML/Graphics.hpp
--
-
-/home/zack/git-repos/KeyGenerator/TcpSocket.cpp
-TcpSocket.h
-/home/zack/git-repos/KeyGenerator/TcpSocket.h
-
-/home/zack/git-repos/KeyGenerator/TcpSocket.h
-cstdlib
--
-iostream
--
-SFML/Network.hpp
 -
 
 /home/zack/git-repos/KeyGenerator/TextBoxObj.cpp

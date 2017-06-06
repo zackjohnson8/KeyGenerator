@@ -297,33 +297,6 @@ FileHandler.cpp.s:
 	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/FileHandler.cpp.s
 .PHONY : FileHandler.cpp.s
 
-Sprite.o: Sprite.cpp.o
-
-.PHONY : Sprite.o
-
-# target to build an object file
-Sprite.cpp.o:
-	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/Sprite.cpp.o
-.PHONY : Sprite.cpp.o
-
-Sprite.i: Sprite.cpp.i
-
-.PHONY : Sprite.i
-
-# target to preprocess a source file
-Sprite.cpp.i:
-	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/Sprite.cpp.i
-.PHONY : Sprite.cpp.i
-
-Sprite.s: Sprite.cpp.s
-
-.PHONY : Sprite.s
-
-# target to generate assembly for a file
-Sprite.cpp.s:
-	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/Sprite.cpp.s
-.PHONY : Sprite.cpp.s
-
 TaskObj.o: TaskObj.cpp.o
 
 .PHONY : TaskObj.o
@@ -350,33 +323,6 @@ TaskObj.s: TaskObj.cpp.s
 TaskObj.cpp.s:
 	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/TaskObj.cpp.s
 .PHONY : TaskObj.cpp.s
-
-TcpSocket.o: TcpSocket.cpp.o
-
-.PHONY : TcpSocket.o
-
-# target to build an object file
-TcpSocket.cpp.o:
-	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/TcpSocket.cpp.o
-.PHONY : TcpSocket.cpp.o
-
-TcpSocket.i: TcpSocket.cpp.i
-
-.PHONY : TcpSocket.i
-
-# target to preprocess a source file
-TcpSocket.cpp.i:
-	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/TcpSocket.cpp.i
-.PHONY : TcpSocket.cpp.i
-
-TcpSocket.s: TcpSocket.cpp.s
-
-.PHONY : TcpSocket.s
-
-# target to generate assembly for a file
-TcpSocket.cpp.s:
-	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/TcpSocket.cpp.s
-.PHONY : TcpSocket.cpp.s
 
 TextBoxObj.o: TextBoxObj.cpp.o
 
@@ -513,15 +459,9 @@ help:
 	@echo "... FileHandler.o"
 	@echo "... FileHandler.i"
 	@echo "... FileHandler.s"
-	@echo "... Sprite.o"
-	@echo "... Sprite.i"
-	@echo "... Sprite.s"
 	@echo "... TaskObj.o"
 	@echo "... TaskObj.i"
 	@echo "... TaskObj.s"
-	@echo "... TcpSocket.o"
-	@echo "... TcpSocket.i"
-	@echo "... TcpSocket.s"
 	@echo "... TextBoxObj.o"
 	@echo "... TextBoxObj.i"
 	@echo "... TextBoxObj.s"

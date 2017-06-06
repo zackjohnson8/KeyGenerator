@@ -20,21 +20,22 @@ Date: 03/15/17
 #include "AddWindow.h"
 
 //Global variables
-sf::Font font;
+sf::Font MAIN_FONT;
+const int BUTTON_BORDER_SIZE = 2;
+const int BOTTOM_BUFFER_SIZE = 15;
+const int SIDE_BUFFER_SIZE = 100;
+const int MAIN_WINDOW_WIDTH = 500;
+const int MAIN_WINDOW_HEIGHT = 500;
 
 // Function Declaration
 void fileHandlerDebugger( FileHandler* debuggerFile );
+void loadFont();
 TaskObj* addTask();
+void buildUIMainWindow(DisplayWindow*, ButtonObj*, ButtonObj*, TextObj*, TextObj*);
 
 // MAIN //////////////////
 int main()
 {
-
-
-// NETWORK //////////////////////////
-//    sf::IpAddress myAddress = sf::IPAddress::getLocalAddress();
-//
-//    sf::Socket *Listener = new sf::Socket(sf::Socket::Tcp);
 
 
 //========== File Handler Debugging ====================//
@@ -46,74 +47,24 @@ int main()
 //========= MAIN LOOP =========================
 
     // Window Parameters
-    sf::Vector2f mainWindowSize = sf::Vector2f(500, 500);
-    sf::Vector2f addButtonSize = sf::Vector2f(mainWindowSize.x/4, 50);
-    sf::Vector2f removeButtonSize = sf::Vector2f(mainWindowSize.x/4, 50);
-    int buttonBoarderSize = 2;
-    int bottomBuffer = 15;
-    int sideBuffer = 100;
-
     sf::Vector2i mousePosition;
-    std::string holdString;
-    int holdValue;
     TaskObj* holdTask = NULL;
 
-    DisplayWindow* mainWindow = new DisplayWindow();
-    mainWindow->create(sf::VideoMode(mainWindowSize.x, mainWindowSize.y), "My Program", sf::Style::Close);
-
-    // Add font for text
-    if(font.loadFromFile("ClearSans-Regular.ttf"))
-    {
-
-        debugFile->addTextToFile("Loaded Text");
-
-    }else
-    {
-
-        debugFile->addTextToFile("ERROR: Font Not Loaded");
-
-    }
+    // Add MAIN_FONT for text
+    loadFont();
 
     // Build mainWindow Display items ///////////////////////////////////////////////////
+    DisplayWindow* mainWindow = new DisplayWindow();
+    mainWindow->create(sf::VideoMode(MAIN_WINDOW_WIDTH, MAIN_WINDOW_HEIGHT), "My Program", sf::Style::Close);
+
+    ButtonObj* addButton = new ButtonObj();
+    ButtonObj* removeButton = new ButtonObj();
+    TextObj* addButtonText = new TextObj();
+    TextObj* removeButtonText = new TextObj();
+    buildUIMainWindow(mainWindow, addButton, removeButton, addButtonText, removeButtonText);
 
     // ADD BUTTONS
-    ButtonObj* addButton = new ButtonObj();
-    addButton->setSize(addButtonSize);
-    addButton->setPosition(buttonBoarderSize + sideBuffer, mainWindow->getSize().y - addButtonSize.y - bottomBuffer);
-    addButton->setFillColor(sf::Color::White);
-    addButton->setOutlineThickness(buttonBoarderSize);
-    addButton->setOutlineColor(sf::Color(0,157,247,255));
-    addButton->setTask(ADD_TASK);
-    mainWindow->addButton(*addButton);
 
-    ButtonObj* removeButton = new ButtonObj();
-    removeButton->setSize(removeButtonSize);
-    removeButton->setPosition(mainWindow->getSize().x - removeButtonSize.x - buttonBoarderSize - sideBuffer, mainWindow->getSize().y - removeButtonSize.y - bottomBuffer);
-    removeButton->setFillColor(sf::Color::White);
-    removeButton->setOutlineThickness(buttonBoarderSize);
-    removeButton->setOutlineColor(sf::Color(0,157,247,255));
-    removeButton->setTask(REMOVE_TASK);
-    mainWindow->addButton(*removeButton);
-
-    // ADD TEXTS
-    TextObj* addButtonText = new TextObj();
-    addButtonText->setFont(font);
-    addButtonText->setStyle(sf::Text::Bold);
-    addButtonText->setCharacterSize(16);
-    addButtonText->setColor(sf::Color::Black);
-    addButtonText->setString("add");
-    addButtonText->setTextLocationCentered(addButton);
-    mainWindow->addText(*addButtonText);
-
-
-    TextObj* removeButtonText = new TextObj();
-    removeButtonText->setFont(font);
-    removeButtonText->setStyle(sf::Text::Bold);
-    removeButtonText->setCharacterSize(16);
-    removeButtonText->setColor(sf::Color::Black);
-    removeButtonText->setString("remove");
-    removeButtonText->setTextLocationCentered(removeButton);
-    mainWindow->addText(*removeButtonText);
 
 
 //////////// MAIN PROGRAM START //////////////////////////
@@ -232,7 +183,7 @@ TaskObj* addTask()
     newTaskHolder = new TaskObj();
 
     // Collect all the data
-    addEventWindow = new AddWindow(font);
+    addEventWindow = new AddWindow(MAIN_FONT);
 
     while(addEventWindow->isOpen())
     {
@@ -309,36 +260,60 @@ TaskObj* addTask()
 
 }
 
+void loadFont()
+{
 
-/* SOCKET NOTES */
-/*
-    TCP(reliable) UDP(lost but fast)
+    if(MAIN_FONT.loadFromFile("ClearSans-Regular.ttf"))
+    {
+    }else
+    {
+        std::cout << "ERROR: Font Not Loaded" << std::endl;
+
+//        debugFile->addTextToFile("ERROR: Font Not Loaded");
+
+    }
+
+}
+
+void buildUIMainWindow(DisplayWindow* pMainWindow, ButtonObj* pAddButton, ButtonObj* pRemoveButton, TextObj* pAddButtonText, TextObj* pRemoveButtonText)
+{
+
+    sf::Vector2f addButtonSize = sf::Vector2f(MAIN_WINDOW_WIDTH/4, 50);
+    sf::Vector2f removeButtonSize = sf::Vector2f(MAIN_WINDOW_WIDTH/4, 50);
+
+    pAddButton->setSize(addButtonSize);
+    pAddButton->setPosition(BUTTON_BORDER_SIZE + SIDE_BUFFER_SIZE, pMainWindow->getSize().y - addButtonSize.y - BOTTOM_BUFFER_SIZE);
+    pAddButton->setFillColor(sf::Color::White);
+    pAddButton->setOutlineThickness(BUTTON_BORDER_SIZE);
+    pAddButton->setOutlineColor(sf::Color(0,157,247,255));
+    pAddButton->setTask(ADD_TASK);
+    pMainWindow->addButton(*pAddButton);
+
+    pRemoveButton->setSize(removeButtonSize);
+    pRemoveButton->setPosition(pMainWindow->getSize().x - removeButtonSize.x - BUTTON_BORDER_SIZE - SIDE_BUFFER_SIZE, pMainWindow->getSize().y - removeButtonSize.y - BOTTOM_BUFFER_SIZE);
+    pRemoveButton->setFillColor(sf::Color::White);
+    pRemoveButton->setOutlineThickness(BUTTON_BORDER_SIZE);
+    pRemoveButton->setOutlineColor(sf::Color(0,157,247,255));
+    pRemoveButton->setTask(REMOVE_TASK);
+    pMainWindow->addButton(*pRemoveButton);
+
+    // ADD TEXTS
+    pAddButtonText->setFont(MAIN_FONT);
+    pAddButtonText->setStyle(sf::Text::Bold);
+    pAddButtonText->setCharacterSize(16);
+    pAddButtonText->setColor(sf::Color::Black);
+    pAddButtonText->setString("add");
+    pAddButtonText->setTextLocationCentered(pAddButton);
+    pMainWindow->addText(*pAddButtonText);
+
+    pRemoveButtonText->setFont(MAIN_FONT);
+    pRemoveButtonText->setStyle(sf::Text::Bold);
+    pRemoveButtonText->setCharacterSize(16);
+    pRemoveButtonText->setColor(sf::Color::Black);
+    pRemoveButtonText->setString("remove");
+    pRemoveButtonText->setTextLocationCentered(pRemoveButton);
+    pMainWindow->addText(*pRemoveButtonText);
+
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-*/

@@ -21,15 +21,9 @@ CMakeFiles/myproject.dir/DisplayWindow.cpp.o
 CMakeFiles/myproject.dir/FileHandler.cpp.o
  /home/zack/git-repos/KeyGenerator/FileHandler.cpp
  /home/zack/git-repos/KeyGenerator/FileHandler.h
-CMakeFiles/myproject.dir/Sprite.cpp.o
- /home/zack/git-repos/KeyGenerator/Sprite.cpp
- /home/zack/git-repos/KeyGenerator/Sprite.h
 CMakeFiles/myproject.dir/TaskObj.cpp.o
  /home/zack/git-repos/KeyGenerator/TaskObj.cpp
  /home/zack/git-repos/KeyGenerator/TaskObj.h
-CMakeFiles/myproject.dir/TcpSocket.cpp.o
- /home/zack/git-repos/KeyGenerator/TcpSocket.cpp
- /home/zack/git-repos/KeyGenerator/TcpSocket.h
 CMakeFiles/myproject.dir/TextBoxObj.cpp.o
  /home/zack/git-repos/KeyGenerator/TextBoxObj.cpp
 CMakeFiles/myproject.dir/TextObj.cpp.o

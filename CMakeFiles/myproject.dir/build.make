@@ -81,33 +81,9 @@ CMakeFiles/myproject.dir/main.cpp.o.provides: CMakeFiles/myproject.dir/main.cpp.
 CMakeFiles/myproject.dir/main.cpp.o.provides.build: CMakeFiles/myproject.dir/main.cpp.o
 
 
-CMakeFiles/myproject.dir/TcpSocket.cpp.o: CMakeFiles/myproject.dir/flags.make
-CMakeFiles/myproject.dir/TcpSocket.cpp.o: TcpSocket.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zack/git-repos/KeyGenerator/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/myproject.dir/TcpSocket.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/myproject.dir/TcpSocket.cpp.o -c /home/zack/git-repos/KeyGenerator/TcpSocket.cpp
-
-CMakeFiles/myproject.dir/TcpSocket.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/myproject.dir/TcpSocket.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zack/git-repos/KeyGenerator/TcpSocket.cpp > CMakeFiles/myproject.dir/TcpSocket.cpp.i
-
-CMakeFiles/myproject.dir/TcpSocket.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/myproject.dir/TcpSocket.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zack/git-repos/KeyGenerator/TcpSocket.cpp -o CMakeFiles/myproject.dir/TcpSocket.cpp.s
-
-CMakeFiles/myproject.dir/TcpSocket.cpp.o.requires:
-
-.PHONY : CMakeFiles/myproject.dir/TcpSocket.cpp.o.requires
-
-CMakeFiles/myproject.dir/TcpSocket.cpp.o.provides: CMakeFiles/myproject.dir/TcpSocket.cpp.o.requires
-	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/TcpSocket.cpp.o.provides.build
-.PHONY : CMakeFiles/myproject.dir/TcpSocket.cpp.o.provides
-
-CMakeFiles/myproject.dir/TcpSocket.cpp.o.provides.build: CMakeFiles/myproject.dir/TcpSocket.cpp.o
-
-
 CMakeFiles/myproject.dir/TextBoxObj.cpp.o: CMakeFiles/myproject.dir/flags.make
 CMakeFiles/myproject.dir/TextBoxObj.cpp.o: TextBoxObj.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zack/git-repos/KeyGenerator/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/myproject.dir/TextBoxObj.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zack/git-repos/KeyGenerator/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/myproject.dir/TextBoxObj.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/myproject.dir/TextBoxObj.cpp.o -c /home/zack/git-repos/KeyGenerator/TextBoxObj.cpp
 
 CMakeFiles/myproject.dir/TextBoxObj.cpp.i: cmake_force
@@ -131,7 +107,7 @@ CMakeFiles/myproject.dir/TextBoxObj.cpp.o.provides.build: CMakeFiles/myproject.d
 
 CMakeFiles/myproject.dir/ButtonObj.cpp.o: CMakeFiles/myproject.dir/flags.make
 CMakeFiles/myproject.dir/ButtonObj.cpp.o: ButtonObj.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zack/git-repos/KeyGenerator/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/myproject.dir/ButtonObj.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zack/git-repos/KeyGenerator/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/myproject.dir/ButtonObj.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/myproject.dir/ButtonObj.cpp.o -c /home/zack/git-repos/KeyGenerator/ButtonObj.cpp
 
 CMakeFiles/myproject.dir/ButtonObj.cpp.i: cmake_force
@@ -155,7 +131,7 @@ CMakeFiles/myproject.dir/ButtonObj.cpp.o.provides.build: CMakeFiles/myproject.di
 
 CMakeFiles/myproject.dir/TextObj.cpp.o: CMakeFiles/myproject.dir/flags.make
 CMakeFiles/myproject.dir/TextObj.cpp.o: TextObj.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zack/git-repos/KeyGenerator/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/myproject.dir/TextObj.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zack/git-repos/KeyGenerator/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/myproject.dir/TextObj.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/myproject.dir/TextObj.cpp.o -c /home/zack/git-repos/KeyGenerator/TextObj.cpp
 
 CMakeFiles/myproject.dir/TextObj.cpp.i: cmake_force
@@ -179,7 +155,7 @@ CMakeFiles/myproject.dir/TextObj.cpp.o.provides.build: CMakeFiles/myproject.dir/
 
 CMakeFiles/myproject.dir/FileHandler.cpp.o: CMakeFiles/myproject.dir/flags.make
 CMakeFiles/myproject.dir/FileHandler.cpp.o: FileHandler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zack/git-repos/KeyGenerator/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/myproject.dir/FileHandler.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zack/git-repos/KeyGenerator/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/myproject.dir/FileHandler.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/myproject.dir/FileHandler.cpp.o -c /home/zack/git-repos/KeyGenerator/FileHandler.cpp
 
 CMakeFiles/myproject.dir/FileHandler.cpp.i: cmake_force
@@ -203,7 +179,7 @@ CMakeFiles/myproject.dir/FileHandler.cpp.o.provides.build: CMakeFiles/myproject.
 
 CMakeFiles/myproject.dir/TaskObj.cpp.o: CMakeFiles/myproject.dir/flags.make
 CMakeFiles/myproject.dir/TaskObj.cpp.o: TaskObj.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zack/git-repos/KeyGenerator/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/myproject.dir/TaskObj.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zack/git-repos/KeyGenerator/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/myproject.dir/TaskObj.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/myproject.dir/TaskObj.cpp.o -c /home/zack/git-repos/KeyGenerator/TaskObj.cpp
 
 CMakeFiles/myproject.dir/TaskObj.cpp.i: cmake_force
@@ -225,33 +201,9 @@ CMakeFiles/myproject.dir/TaskObj.cpp.o.provides: CMakeFiles/myproject.dir/TaskOb
 CMakeFiles/myproject.dir/TaskObj.cpp.o.provides.build: CMakeFiles/myproject.dir/TaskObj.cpp.o
 
 
-CMakeFiles/myproject.dir/Sprite.cpp.o: CMakeFiles/myproject.dir/flags.make
-CMakeFiles/myproject.dir/Sprite.cpp.o: Sprite.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zack/git-repos/KeyGenerator/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/myproject.dir/Sprite.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/myproject.dir/Sprite.cpp.o -c /home/zack/git-repos/KeyGenerator/Sprite.cpp
-
-CMakeFiles/myproject.dir/Sprite.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/myproject.dir/Sprite.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zack/git-repos/KeyGenerator/Sprite.cpp > CMakeFiles/myproject.dir/Sprite.cpp.i
-
-CMakeFiles/myproject.dir/Sprite.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/myproject.dir/Sprite.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zack/git-repos/KeyGenerator/Sprite.cpp -o CMakeFiles/myproject.dir/Sprite.cpp.s
-
-CMakeFiles/myproject.dir/Sprite.cpp.o.requires:
-
-.PHONY : CMakeFiles/myproject.dir/Sprite.cpp.o.requires
-
-CMakeFiles/myproject.dir/Sprite.cpp.o.provides: CMakeFiles/myproject.dir/Sprite.cpp.o.requires
-	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/Sprite.cpp.o.provides.build
-.PHONY : CMakeFiles/myproject.dir/Sprite.cpp.o.provides
-
-CMakeFiles/myproject.dir/Sprite.cpp.o.provides.build: CMakeFiles/myproject.dir/Sprite.cpp.o
-
-
 CMakeFiles/myproject.dir/AddWindow.cpp.o: CMakeFiles/myproject.dir/flags.make
 CMakeFiles/myproject.dir/AddWindow.cpp.o: AddWindow.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zack/git-repos/KeyGenerator/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/myproject.dir/AddWindow.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zack/git-repos/KeyGenerator/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/myproject.dir/AddWindow.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/myproject.dir/AddWindow.cpp.o -c /home/zack/git-repos/KeyGenerator/AddWindow.cpp
 
 CMakeFiles/myproject.dir/AddWindow.cpp.i: cmake_force
@@ -275,7 +227,7 @@ CMakeFiles/myproject.dir/AddWindow.cpp.o.provides.build: CMakeFiles/myproject.di
 
 CMakeFiles/myproject.dir/cstring.cpp.o: CMakeFiles/myproject.dir/flags.make
 CMakeFiles/myproject.dir/cstring.cpp.o: cstring.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zack/git-repos/KeyGenerator/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/myproject.dir/cstring.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zack/git-repos/KeyGenerator/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/myproject.dir/cstring.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/myproject.dir/cstring.cpp.o -c /home/zack/git-repos/KeyGenerator/cstring.cpp
 
 CMakeFiles/myproject.dir/cstring.cpp.i: cmake_force
@@ -299,7 +251,7 @@ CMakeFiles/myproject.dir/cstring.cpp.o.provides.build: CMakeFiles/myproject.dir/
 
 CMakeFiles/myproject.dir/DisplayWindow.cpp.o: CMakeFiles/myproject.dir/flags.make
 CMakeFiles/myproject.dir/DisplayWindow.cpp.o: DisplayWindow.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zack/git-repos/KeyGenerator/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/myproject.dir/DisplayWindow.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zack/git-repos/KeyGenerator/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/myproject.dir/DisplayWindow.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/myproject.dir/DisplayWindow.cpp.o -c /home/zack/git-repos/KeyGenerator/DisplayWindow.cpp
 
 CMakeFiles/myproject.dir/DisplayWindow.cpp.i: cmake_force
@@ -324,13 +276,11 @@ CMakeFiles/myproject.dir/DisplayWindow.cpp.o.provides.build: CMakeFiles/myprojec
 # Object files for target myproject
 myproject_OBJECTS = \
 "CMakeFiles/myproject.dir/main.cpp.o" \
-"CMakeFiles/myproject.dir/TcpSocket.cpp.o" \
 "CMakeFiles/myproject.dir/TextBoxObj.cpp.o" \
 "CMakeFiles/myproject.dir/ButtonObj.cpp.o" \
 "CMakeFiles/myproject.dir/TextObj.cpp.o" \
 "CMakeFiles/myproject.dir/FileHandler.cpp.o" \
 "CMakeFiles/myproject.dir/TaskObj.cpp.o" \
-"CMakeFiles/myproject.dir/Sprite.cpp.o" \
 "CMakeFiles/myproject.dir/AddWindow.cpp.o" \
 "CMakeFiles/myproject.dir/cstring.cpp.o" \
 "CMakeFiles/myproject.dir/DisplayWindow.cpp.o"
@@ -339,13 +289,11 @@ myproject_OBJECTS = \
 myproject_EXTERNAL_OBJECTS =
 
 myproject: CMakeFiles/myproject.dir/main.cpp.o
-myproject: CMakeFiles/myproject.dir/TcpSocket.cpp.o
 myproject: CMakeFiles/myproject.dir/TextBoxObj.cpp.o
 myproject: CMakeFiles/myproject.dir/ButtonObj.cpp.o
 myproject: CMakeFiles/myproject.dir/TextObj.cpp.o
 myproject: CMakeFiles/myproject.dir/FileHandler.cpp.o
 myproject: CMakeFiles/myproject.dir/TaskObj.cpp.o
-myproject: CMakeFiles/myproject.dir/Sprite.cpp.o
 myproject: CMakeFiles/myproject.dir/AddWindow.cpp.o
 myproject: CMakeFiles/myproject.dir/cstring.cpp.o
 myproject: CMakeFiles/myproject.dir/DisplayWindow.cpp.o
@@ -356,7 +304,7 @@ myproject: /usr/lib/x86_64-linux-gnu/libsfml-graphics.so
 myproject: /usr/lib/x86_64-linux-gnu/libsfml-network.so
 myproject: /usr/lib/x86_64-linux-gnu/libsfml-audio.so
 myproject: CMakeFiles/myproject.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/zack/git-repos/KeyGenerator/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable myproject"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/zack/git-repos/KeyGenerator/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable myproject"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/myproject.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -365,13 +313,11 @@ CMakeFiles/myproject.dir/build: myproject
 .PHONY : CMakeFiles/myproject.dir/build
 
 CMakeFiles/myproject.dir/requires: CMakeFiles/myproject.dir/main.cpp.o.requires
-CMakeFiles/myproject.dir/requires: CMakeFiles/myproject.dir/TcpSocket.cpp.o.requires
 CMakeFiles/myproject.dir/requires: CMakeFiles/myproject.dir/TextBoxObj.cpp.o.requires
 CMakeFiles/myproject.dir/requires: CMakeFiles/myproject.dir/ButtonObj.cpp.o.requires
 CMakeFiles/myproject.dir/requires: CMakeFiles/myproject.dir/TextObj.cpp.o.requires
 CMakeFiles/myproject.dir/requires: CMakeFiles/myproject.dir/FileHandler.cpp.o.requires
 CMakeFiles/myproject.dir/requires: CMakeFiles/myproject.dir/TaskObj.cpp.o.requires
-CMakeFiles/myproject.dir/requires: CMakeFiles/myproject.dir/Sprite.cpp.o.requires
 CMakeFiles/myproject.dir/requires: CMakeFiles/myproject.dir/AddWindow.cpp.o.requires
 CMakeFiles/myproject.dir/requires: CMakeFiles/myproject.dir/cstring.cpp.o.requires
 CMakeFiles/myproject.dir/requires: CMakeFiles/myproject.dir/DisplayWindow.cpp.o.requires
