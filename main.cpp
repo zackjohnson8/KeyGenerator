@@ -30,7 +30,7 @@ const int MAIN_WINDOW_HEIGHT = 500;
 // Function Declaration
 void fileHandlerDebugger( FileHandler* debuggerFile );
 void loadFont();
-TaskObj* addTask();
+TaskObj* createTask();
 void buildUIMainWindow(DisplayWindow*, ButtonObj*, ButtonObj*, TextObj*, TextObj*);
 
 // MAIN //////////////////
@@ -62,8 +62,6 @@ int main()
     TextObj* addButtonText = new TextObj();
     TextObj* removeButtonText = new TextObj();
     buildUIMainWindow(mainWindow, addButton, removeButton, addButtonText, removeButtonText);
-
-    // ADD BUTTONS
 
 
 
@@ -97,9 +95,9 @@ int main()
                         // Create a task and send it to the main window
                         case ADD_TASK:
 
-                            holdTask = addTask();
+                            holdTask = createTask();
 
-                            // Making sure that addTask window wasn't just closed out of or cancel button clicked
+                            // Making sure that createTask window wasn't just closed out of or cancel button clicked
                             if(holdTask != NULL)
                             {
                                 mainWindow->addTask(*holdTask);
@@ -169,7 +167,7 @@ void fileHandlerDebugger( FileHandler* debuggerFile )
 
 }
 
-TaskObj* addTask()
+TaskObj* createTask()
 {
 
     TaskObj* newTaskHolder = NULL;
